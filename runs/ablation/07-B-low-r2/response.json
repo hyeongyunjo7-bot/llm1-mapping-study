@@ -1,0 +1,1201 @@
+{
+  "device_variants": [
+    {
+      "model": "LB-L01E",
+      "product_name": "LED Bulb T2 (E26, CCT)",
+      "description": "E26 CCT 표기 변형. 제품명만으로 색온도 제어 인터페이스나 범위를 확정하지 않는다.",
+      "manufacturer": "Lumi United Technology Co., Ltd.",
+      "certification_id": "R-R-LUt-LBL01E",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름·모델 행",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01E 표시사항",
+          "quote": "모델명: LB-L01E"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01E 표시사항",
+          "quote": "인증번호: R-R-LUt-LBL01E"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01E 표시사항",
+          "quote": "제조자: Lumi United Technology Co., Ltd."
+        }
+      ]
+    },
+    {
+      "model": "LB-L01D",
+      "product_name": "LED Bulb T2 (E26, RGB CCT)",
+      "description": "E26 RGB CCT 표기 변형. RGB 표기는 확인되지만 개별 채널 쓰기·읽기 지원은 확인되지 않는다.",
+      "manufacturer": "Lumi United Technology Co., Ltd.",
+      "certification_id": "R-R-LUt-LBL01D",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름·모델 행",
+          "quote": "LED Bulb T2 (E26, RGB CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01D 표시사항",
+          "quote": "모델명: LB-L01D"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01D 표시사항",
+          "quote": "인증번호: R-R-LUt-LBL01D"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01D 표시사항",
+          "quote": "제조자: Lumi United Technology Co., Ltd."
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "id": "identity_metadata",
+      "name": "제품·제조·인증 식별 정보",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 자산 정보",
+      "description": "제품명, 모델, 제조자, 제조국가, 인증번호를 변형별 정적 정보로 관리하는 DRAFT 후보이다. 실제 장치에서 읽은 식별값으로 취급하지 않는다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "source": "설명서 수동 provisioning",
+        "protocol": null,
+        "read_operation": null,
+        "write_operation": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata DataPoint; 문자열의 키·값 형식은 제안",
+        "access": "표준 RW; 후보 정책은 설명서 기반 정적 정보 읽기"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": "변형별 제품명·모델·인증번호를 그대로 보존한다.",
+        "proposed_policy": "출처와 모델을 포함하는 문자열 목록으로 표현한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "LB-L01E·LB-L01D 표시사항",
+          "quote": "제조국가: 중국"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, metadata",
+          "quote": "Free metadata information."
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.2, Rule 1-10",
+          "quote": "any <flexContainer> associated to a ModuleClass model of the Metadata domain"
+        }
+      ],
+      "uncertainties": [
+        "device_variants의 변형별 증거를 함께 적용한다.",
+        "일련번호와 실제 제조년월 값은 제공되지 않는다.",
+        "5.5 Device model 및 dmDeviceInfo 정의가 없어 전용 Property 매핑은 확정할 수 없다."
+      ]
+    },
+    {
+      "id": "rated_electrical",
+      "name": "정격 전기 사양",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 자산 정보",
+      "description": "정격 전력 10.5 W, 정격 전압 100–240 V~, 주파수 50/60 Hz를 관리한다. 실시간 측정값이 아니다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "source": "설명서 수동 provisioning",
+        "protocol": null,
+        "attribute_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata; 정격값 표현 형식은 제안"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": "10.5W; 100 - 240 V~, 50/60 Hz",
+        "proposed_policy": "정격, 교류 표시, 범위 및 선택 주파수 의미를 문자열로 보존한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전력 행",
+          "quote": "10.5W"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전압 행",
+          "quote": "100 - 240 V~, 50/60 Hz"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, metadata",
+          "quote": "Free metadata information."
+        }
+      ],
+      "uncertainties": [
+        "정격값의 원격 조회 인터페이스는 없다."
+      ]
+    },
+    {
+      "id": "physical_dimensions",
+      "name": "소켓·외형 치수",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 자산 정보",
+      "description": "E26 소켓과 60 × 108 mm 치수를 보존한다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "source": "설명서 수동 provisioning",
+        "protocol": null,
+        "attribute_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata 사용 후보"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": "60 × 108mm(2.36 × 4.25인치)",
+        "proposed_policy": "원문 치수를 보존한다. features.size의 3축 배열은 생성하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개, 외형 표시",
+          "quote": "E26 소켓"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 크기 행",
+          "quote": "60 × 108mm(2.36 × 4.25인치)"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, size",
+          "quote": "The size of the device [length, width, height]."
+        }
+      ],
+      "uncertainties": [
+        "두 치수의 축 의미가 명시되지 않아 세 번째 치수나 3축 순서를 추정할 수 없다."
+      ]
+    },
+    {
+      "id": "operating_environment",
+      "name": "허용 작동 환경",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 자산 정보",
+      "description": "작동 온도와 습도 조건을 관리한다. 센서 측정이나 경보 임계값이 아니다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "source": "설명서 수동 provisioning",
+        "protocol": null,
+        "attribute_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata 사용 후보"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": "-10 °C ~ 40 °C; 0 ~ 95% RH, 비결로 조건",
+        "proposed_policy": "단위·범위·비결로 조건을 함께 보존한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 온도 행",
+          "quote": "-10 °C ~ 40 °C (14 °F ~ 104 °F)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 습도 행",
+          "quote": "0 ~ 95% RH, 비결로 조건"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, metadata",
+          "quote": "Free metadata information."
+        }
+      ],
+      "uncertainties": [
+        "환경 감지 또는 자동 보호 동작은 문서화되지 않았다."
+      ]
+    },
+    {
+      "id": "radio_capabilities",
+      "name": "무선 프로토콜·대역 지원",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "통신 구성",
+      "description": "Thread, Zigbee 및 Bluetooth LE의 사양상 지원과 주파수 대역을 정적 정보로 관리한다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "protocols": [
+          "Thread",
+          "Zigbee",
+          "Bluetooth LE(1M/2M)"
+        ],
+        "bands_MHz": {
+          "Thread": [
+            2405,
+            2480
+          ],
+          "Zigbee": [
+            2405,
+            2480
+          ],
+          "Bluetooth LE": [
+            2402,
+            2480
+          ]
+        },
+        "endpoint": null,
+        "cluster": null,
+        "attribute_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata 사용 후보"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": "프로토콜별 MHz 대역 및 Bluetooth LE 1M/2M 표기",
+        "proposed_policy": "대역 양끝을 현재 동작 주파수로 변환하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜 행",
+          "quote": "Thread(2405 MHz~ 2480 MHz)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜 행",
+          "quote": "Zigbee(2405 MHz~ 2480 MHz)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜 행",
+          "quote": "Bluetooth LE(1M/2M)(2402 MHz~ 2480 MHz)"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, metadata",
+          "quote": "Free metadata information."
+        }
+      ],
+      "uncertainties": [
+        "Bluetooth LE의 용도와 관리 서비스는 명시되지 않는다.",
+        "여러 무선 프로토콜의 동시 사용 여부는 확인되지 않는다."
+      ]
+    },
+    {
+      "id": "integration_dependencies",
+      "name": "연결 경로·필수 인프라",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "연동 조건",
+      "description": "Zigbee의 Aqara 허브 경로, 허브의 Matter 브리지 경로, Thread의 Matter 직접 통합 및 필수 인프라를 관리한다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "paths": [
+          "Zigbee → 호환 Aqara 허브 → Aqara Home",
+          "Zigbee → Aqara 허브의 Matter 브리지 → Matter 생태계",
+          "Thread → Matter 생태계",
+          "Thread → Thread Border Router 기능이 있는 Aqara Hub → Aqara Home"
+        ],
+        "api": null,
+        "endpoint": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization",
+        "ModuleClass": "features",
+        "DataPoint": "metadata",
+        "action": null,
+        "type": "list of xs:string",
+        "standard_custom_status": "표준 metadata; 연결 경로 표현은 제안"
+      },
+      "direction": "문서 provisioning → oneM2M",
+      "conversion": {
+        "documented": null,
+        "proposed_policy": "연결 조건을 정적 정보로 보존하고 실제 연결 상태와 구별한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개",
+          "quote": "허브의 Matter 브리지"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개, Matter 생태계 사용 조건",
+          "quote": "Matter Controller 와 Thread Border Router가 필요합니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Thread 모드)",
+          "quote": "Thread Border Router기능이 있는 Aqara Hub(예: Hub M3)가 필요합니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Zigbee 모드)",
+          "quote": "Aqara Zigbee Hub가 필요합니다."
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.9.1-1, metadata",
+          "quote": "Free metadata information."
+        }
+      ],
+      "uncertainties": [
+        "IPE가 사용할 경로와 접근 API는 미정이다.",
+        "브리지 경로와 Thread 직접 경로의 기능 동등성은 확인되지 않는다."
+      ]
+    },
+    {
+      "id": "active_protocol",
+      "name": "현재 통신 모드",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "통신 구성",
+      "description": "Thread 초기 상태와 Zigbee 선택 절차는 문서화되어 있다. 현재 모드의 자동 조회는 미확인이다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "Aqara Home 연결 화면",
+        "documented_initial_state": "Thread",
+        "choices": [
+          "Thread",
+          "Zigbee"
+        ],
+        "read_operation": null,
+        "attribute_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customProtocolStatus",
+        "DataPoint": "activeProtocol",
+        "action": null,
+        "type": "xs:string 제안",
+        "standard_custom_status": "custom 후보; 제공된 SDT에 직접 대응 없음"
+      },
+      "direction": "장치 또는 허브 → oneM2M 후보; 조회 가능성 미확인",
+      "conversion": {
+        "documented": "초기 상태 Thread",
+        "proposed_policy": "초기 상태를 현재 관측값으로 대체하지 않고, 확인되지 않은 현재값은 null로 둔다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Zigbee 모드), 2단계",
+          "quote": "장치의 초기 상태는 Thread이며, Zigbee로 전환하는 데 몇 분이 걸릴 수 있습니다."
+        }
+      ],
+      "uncertainties": [
+        "프로토콜 상태 조회, 완료 확인 및 모드별 기능 차이가 필요하다."
+      ]
+    },
+    {
+      "id": "protocol_switch",
+      "name": "프로토콜 전환",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "수명주기 관리",
+      "description": "앱 제거 또는 전원 조작 후 재연결 화면에서 프로토콜을 선택하는 파괴적 절차이다. 단순 모드 속성 쓰기로 취급하지 않는다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "Aqara Home 및 물리 전원 조작",
+        "procedure": "장치 제거 또는 전원 5회 껐다 켜기 후 연결 과정 반복 및 프로토콜 선택",
+        "remote_command": null,
+        "command_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customProtocolManagement",
+        "DataPoint": null,
+        "action": "switchProtocol 후보",
+        "type": {
+          "arguments": null,
+          "result": null
+        },
+        "standard_custom_status": "custom 후보; 관리 모델과 실행 가능성 확인 전 보류"
+      },
+      "direction": "oneM2M → 장치 관리 절차 후보",
+      "conversion": {
+        "documented": "프로토콜 전환은 모든 설정과 데이터를 지운다.",
+        "proposed_policy": "일반 상태 변경과 분리하고 재등록·식별자 연속성 정책을 별도 결정한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "프로토콜을 전환하는 방법",
+          "quote": "프로토콜을 전환하는 것은 공장 설정을 복원하는 것과 같으며 모든 설정과 데이터가 지워집니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "프로토콜을 전환하는 방법",
+          "quote": "Aqara Home 앱에서 장치를 제거하거나 장치의 전원을 5번"
+        },
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, device management services",
+          "quote": "Specialized <mgmtObj> resource types"
+        }
+      ],
+      "uncertainties": [
+        "앱 제거 자체의 효과와 전환 완료 시점은 상세히 설명되지 않는다.",
+        "5회 전원 조작의 네트워크 초기화 설명과 구별해 확인해야 한다.",
+        "전용 관리 specialization 정의가 제공되지 않아 표준 관리 action을 지정할 수 없다."
+      ]
+    },
+    {
+      "id": "network_reset",
+      "name": "네트워크 초기화",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "수명주기 관리",
+      "description": "1초 텀으로 전원을 5회 껐다 켜면 네트워크 연결정보만 삭제하는 절차이다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "물리 전원 조작",
+        "count": 5,
+        "interval_seconds": 1,
+        "remote_command": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customResetManagement",
+        "DataPoint": null,
+        "action": "resetNetwork 후보",
+        "type": {
+          "arguments": null,
+          "result": null
+        },
+        "standard_custom_status": "custom 후보; 표준 관리 specialization 검토 필요"
+      },
+      "direction": "물리 절차; oneM2M 명령 경로 미확인",
+      "conversion": {
+        "documented": "네트워크 연결정보만 삭제; 다른 설정과 기록 보존",
+        "proposed_policy": "binarySwitch.toggle 반복 호출로 대체하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 5회 전원 조작 행",
+          "quote": "사이에 1초의 텀을 두고"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 네트워크 초기화 결과",
+          "quote": "다른 설정 및 기록을 삭제하지 않고 네트워크"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 네트워크 초기화 결과",
+          "quote": "연결정보만 삭제합니다."
+        }
+      ],
+      "uncertainties": [
+        "원격 초기화 지원과 전원 조작의 상세 타이밍은 미확인이다.",
+        "프로토콜 전환 문단의 5회 조작과 후속 절차에 따른 효과 차이를 확인해야 한다."
+      ]
+    },
+    {
+      "id": "factory_reset",
+      "name": "공장 초기화",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "수명주기 관리",
+      "description": "1초 텀으로 전원을 10회 껐다 켜 모든 구성과 데이터를 지우는 절차이다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "물리 전원 조작",
+        "count": 10,
+        "interval_seconds": 1,
+        "remote_command": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customResetManagement",
+        "DataPoint": null,
+        "action": "factoryReset 후보",
+        "type": {
+          "arguments": null,
+          "result": null
+        },
+        "standard_custom_status": "custom 후보; 표준 관리 specialization 검토 필요"
+      },
+      "direction": "물리 절차; oneM2M 명령 경로 미확인",
+      "conversion": {
+        "documented": "모든 구성과 데이터 삭제",
+        "proposed_policy": "네트워크 초기화와 별도 action으로 검토한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 공장 초기화 행",
+          "quote": "장치의 전원을 10회"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 공장 초기화 결과",
+          "quote": "모든 구성과 데이터를 지우고 장치를 완전히"
+        }
+      ],
+      "uncertainties": [
+        "원격 실행, 완료 확인 및 초기화 후 프로토콜 상태는 미확인이다."
+      ]
+    },
+    {
+      "id": "commissioning",
+      "name": "장치 추가·연결 모드",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "수명주기 관리",
+      "description": "Matter 코드 또는 설정 코드로 장치를 추가하며, 전원 공급 후 두 번의 호흡 주기가 연결 모드를 나타낸다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "Matter 호환 앱 또는 Aqara Home",
+        "inputs": [
+          "Matter 코드 스캔",
+          "설정 코드 입력"
+        ],
+        "local_indication": "두 번의 호흡 주기",
+        "state_attribute": null,
+        "commissioning_command": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customCommissioningStatus",
+        "DataPoint": "connectionMode 후보",
+        "action": null,
+        "type": null,
+        "standard_custom_status": "custom 후보; 상태 수집 방법 미확인"
+      },
+      "direction": "로컬 표시 → 관측 정보 후보; 자동 oneM2M 반영 미확인",
+      "conversion": {
+        "documented": "두 번의 호흡 주기 → 장치 연결 모드 진입 표시",
+        "proposed_policy": "육안 표시만으로 지속적인 원격 상태값이나 성공 이벤트를 생성하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Matter 생태계 연결, 2단계",
+          "quote": "Matter 코드를 스캔하거나 설정 코드를"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3단계",
+          "quote": "두 번의 호흡 주기(밝아짐~어두워짐)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3단계",
+          "quote": "장치 연결 모드에 들어왔음을 나타냅니다."
+        }
+      ],
+      "uncertainties": [
+        "연결 모드 종료 조건과 원격 상태 조회는 제공되지 않는다.",
+        "설정 코드 형식·전송 API·저장 필요성은 제공되지 않는다."
+      ]
+    },
+    {
+      "id": "light_power",
+      "name": "논리 점등·소등 상태",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 제어",
+      "description": "binarySwitch가 의미상 대응 후보지만, 설명서의 물리 전원 공급·차단 절차는 원격 논리 스위치 지원 증거가 아니다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "protocol": null,
+        "endpoint": null,
+        "cluster": null,
+        "attribute_id": null,
+        "command_id": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization; state는 customAttribute",
+        "ModuleClass": "binarySwitch",
+        "DataPoint": "state",
+        "action": null,
+        "type": "xs:boolean",
+        "access": "RW",
+        "standard_custom_status": "표준 SDT 후보; 장치 지원 미확인"
+      },
+      "direction": "장치 → oneM2M 상태 및 oneM2M → 장치 제어 후보",
+      "conversion": {
+        "documented": "SDT state: true는 켜짐, false는 꺼짐",
+        "proposed_policy": "통신 불능이나 주전원 차단을 논리 false로 변환하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.12-2, state",
+          "quote": "\"True\" indicates turned-on, and \"False\" indicates turned-off."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 1단계",
+          "quote": "주 차단기를 내리거나"
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.6, Rule 5-1",
+          "quote": "mapped to [customAttribute]"
+        }
+      ],
+      "uncertainties": [
+        "논리 On/Off의 명령·읽기·보고 지원을 경로별로 확인해야 한다."
+      ]
+    },
+    {
+      "id": "brightness_control",
+      "name": "밝기 제어·조회",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 제어",
+      "description": "표준 brightness를 우선 검토한다. 연결 표시의 밝아짐·어두워짐만으로 사용자 밝기 조절 지원을 확정하지 않는다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "protocol": null,
+        "attribute_id": null,
+        "range": null,
+        "unit": null,
+        "reporting": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization; brightness는 customAttribute",
+        "ModuleClass": "brightness",
+        "DataPoint": "brightness",
+        "action": null,
+        "type": "xs:integer",
+        "unit": "pct",
+        "range": [
+          0,
+          100
+        ],
+        "access": "RW",
+        "standard_custom_status": "표준 SDT 후보; 장치 제어 지원 미확인"
+      },
+      "direction": "장치 → oneM2M 상태 및 oneM2M → 장치 제어 후보",
+      "conversion": {
+        "documented": "SDT 밝기는 0–100%; 0%는 최소 밝기이다.",
+        "proposed_policy": "장치 원시 범위·전달 함수 확인 전 배율·반올림을 정하지 않는다. 0%를 소등과 동일시하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.17 brightness",
+          "quote": "0 % is the minimum brightness"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.17-1",
+          "quote": "The status of brightness level."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3단계",
+          "quote": "두 번의 호흡 주기(밝아짐~어두워짐)"
+        }
+      ],
+      "uncertainties": [
+        "지원 범위, 최소값, 전환 시간, 원시 타입 및 상태 보고가 필요하다."
+      ]
+    },
+    {
+      "id": "colour_temperature",
+      "name": "CCT 기능·색온도",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 제어",
+      "description": "두 변형의 CCT 표기를 근거로 검토한다. 제공된 표준의 slcReportInfo.colourTemperature는 가로등용 읽기값이므로 일반 전구의 색온도 제어에 직접 적용하지 않는다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "protocol": null,
+        "attribute_id": null,
+        "unit": null,
+        "range": null,
+        "access": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization 후보",
+        "ModuleClass": "customColourTemperature",
+        "DataPoint": "colourTemperature 후보",
+        "action": null,
+        "type": null,
+        "unit": null,
+        "standard_custom_status": "custom 후보; 직접 정당화되는 표준 제어 모델 없음"
+      },
+      "direction": "읽기·쓰기 방향 미확인",
+      "conversion": {
+        "documented": null,
+        "proposed_policy": "K 또는 다른 원시 단위를 추정하지 않고 변환을 보류한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름 행",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름 행",
+          "quote": "LED Bulb T2 (E26, RGB CCT)"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.81-1, colourTemperature",
+          "quote": "The current colour temperature of the street lights."
+        }
+      ],
+      "uncertainties": [
+        "CCT 조정 지원, 범위, 단위, 해상도 및 원격 조회를 확인해야 한다.",
+        "temperature ModuleClass의 물리 온도 의미를 색온도로 전용하지 않는다."
+      ]
+    },
+    {
+      "id": "rgb_colour",
+      "name": "RGB 색상",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "조명 제어",
+      "description": "RGB CCT 제품명에 근거한 색상 후보이다. 표준 colour의 RGB 채널 의미는 맞지만 장치의 실제 색상 인터페이스는 미확인이다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "protocol": null,
+        "attribute_id": null,
+        "colour_space": null,
+        "channel_range": null,
+        "access": null
+      },
+      "target": {
+        "resource_type": "<flexContainer> specialization; 채널은 customAttribute",
+        "ModuleClass": "colour",
+        "DataPoint": [
+          "red",
+          "green",
+          "blue"
+        ],
+        "action": null,
+        "type": "각 xs:integer",
+        "range": [
+          0,
+          255
+        ],
+        "access": "각 RW",
+        "standard_custom_status": "표준 SDT 조건부 후보"
+      },
+      "direction": "장치 → oneM2M 상태 및 oneM2M → 장치 제어 후보; 미확인",
+      "conversion": {
+        "documented": "SDT RGB 채널 범위는 각각 0–255이다.",
+        "proposed_policy": "원시 색공간 확인 전 RGB 직접 복사나 다른 색공간 변환을 정의하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, LB-L01D 제품 이름",
+          "quote": "LED Bulb T2 (E26, RGB CCT)"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.23 colour",
+          "quote": "Red, Green, and Blue colour channels"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.23-1, red",
+          "quote": "The range is [0,255]."
+        }
+      ],
+      "uncertainties": [
+        "RGB 직접 제어 또는 대체 색공간 지원을 확인해야 한다.",
+        "채널 동시 갱신과 CCT/RGB 간 모드 관계는 미확인이다.",
+        "LB-L01E에는 RGB 후보를 적용하지 않는다."
+      ]
+    },
+    {
+      "id": "ipe_resource_representation",
+      "name": "IPE 표현·동기화 구조",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "연동 기반 구조",
+      "description": "DRAFT의 범위는 정적 자산 정보와 연결 조건의 provisioning, 그리고 증거 보강 후 조명·수명주기 기능의 노출이다. 실제 장치 제어나 적합성은 선언하지 않는다.",
+      "evidence_status": "proposed",
+      "decision": "map_candidate",
+      "source_interface": {
+        "oneM2M_interface": "Mca",
+        "non_oneM2M_interface": null,
+        "selected_path": null
+      },
+      "target": {
+        "resource_type": [
+          "<AE>",
+          "<flexContainer> specialization",
+          "<node>"
+        ],
+        "ModuleClass": null,
+        "DataPoint": null,
+        "action": null,
+        "type": null,
+        "standard_custom_status": "구조 원칙은 표준; Device model·인스턴스 이름·containerDefinition은 미정",
+        "placement": "노출 리소스는 IPE의 Registrar CSE; 표준 Device model 적용 시 모듈은 Device model의 자식",
+        "management_alternatives": [
+          "<node> 아래 specialized <mgmtObj>",
+          "<node>의 [flexNode] 아래 관리용 specialized <flexContainer>"
+        ]
+      },
+      "direction": "지원이 확인된 기능에 한해 상태 반영 및 명령 전달",
+      "conversion": {
+        "documented": "ModuleClass는 specialized <flexContainer>, DataPoint는 해당 리소스의 customAttribute, Action은 별도 specialized <flexContainer>로 매핑한다.",
+        "proposed_policy": "원격 쓰기·보고 기능이 확인되지 않은 후보는 실행 가능한 리소스로 확정하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "IW-EXPOSE",
+          "location": "6.2.1",
+          "quote": "An Interworking Proxy Entity is an AE"
+        },
+        {
+          "document_id": "IW-EXPOSE",
+          "location": "6.2.1",
+          "quote": "the Registrar CSE of that IPE shall host those resource instances"
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.3",
+          "quote": "The ModuleClass models shall be mapped to the specializations of a <flexContainer> resource."
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.4, Rule 3-4",
+          "quote": "by updating the <flexContainer> resource with empty content if it has no argument."
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.2, Rule 1-5",
+          "quote": "A <node> resource shall be created on the same hosting CSE"
+        },
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, device management services",
+          "quote": "child resources of a [flexNode]"
+        }
+      ],
+      "uncertainties": [
+        "5.5 Device model、5.8 관리 모델、6.4 containerDefinition 및 6.5 XSD 본문이 제공되지 않았다.",
+        "custom 후보 이름은 초안용이며 표준 식별자가 아니다.",
+        "Blocking_Update subscription은 제공 문서의 예시 수단이며 의무 구현으로 확정하지 않는다."
+      ]
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "name": "실시간 전력·전압·전류·누적 에너지 측정",
+      "reason": "정격 사양만 제공되며 계측 기능은 확인되지 않는다. energyConsumption으로 정격값을 노출하면 측정 의미를 훼손한다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "정격 전력"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.32 energyConsumption",
+          "quote": "the measured energy consumed by the device since power up"
+        }
+      ]
+    },
+    {
+      "name": "온도·습도 센서 및 환경 경보",
+      "reason": "작동 허용 범위는 센서 측정값이나 설정 가능한 경보 임계값의 증거가 아니다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "작동 온도"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "작동 습도"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.72-1, relativeHumidity",
+          "quote": "The measurement of the relative humidity value."
+        }
+      ]
+    },
+    {
+      "name": "신호 품질·현재 주파수·온라인 상태",
+      "reason": "무선 대역과 연결 구조만으로 RSSI, LQI, 현재 채널 또는 온라인 상태 보고를 도출할 수 없다. connectivity의 필수 rsrp와 signalStrength의 필수 lqi도 장치 근거가 없다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜",
+          "quote": "Thread(2405 MHz~ 2480 MHz)"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.25-1, rsrp",
+          "quote": "in an LTE cell network"
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.78-1, lqi",
+          "quote": "The current value of link quality indicator"
+        }
+      ]
+    },
+    {
+      "name": "가로등 제어용 slcReportInfo·slcParameterSetting·slcAlarm 직접 적용",
+      "reason": "E26 전구를 가로등 제어기로 볼 근거가 없다. colourTemperature 한 항목만을 위해 필수 전압·전류·역률 등의 모듈 의미를 가져오지 않는다.",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.81 slcReportInfo",
+          "quote": "status of the street light controller"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        }
+      ]
+    },
+    {
+      "name": "colourSaturation, 독립 색상 모드, 장면·효과",
+      "reason": "RGB 제품명은 별도 채도·색조·장면 API의 증거가 아니다. 연결 시 호흡 표시는 사용자가 실행하는 효과 기능으로 해석하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.24 colourSaturation",
+          "quote": "control and monitor a colour saturation value"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3단계",
+          "quote": "장치 연결 모드에 들어왔음을 나타냅니다."
+        }
+      ]
+    },
+    {
+      "name": "toggle action 및 물리 전원 조작 자동화",
+      "reason": "표준에 toggle이 존재하지만 장치 지원은 확인되지 않는다. 논리 토글을 물리 전원 차단·복구 또는 초기화 절차로 대체할 근거도 없다.",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.12-1, toggle",
+          "quote": "Toggle the switch."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표",
+          "quote": "장치의 전원을 5회 껐다켜기"
+        }
+      ]
+    },
+    {
+      "name": "Matter 설정 코드를 credentials.token으로 매핑",
+      "reason": "장치 추가용 코드가 사용자 인증 token이라는 근거가 없다. 코드 자체의 일반 관리 속성 노출은 후보 범위에서 제외한다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Matter 생태계 연결",
+          "quote": "설정 코드를 입력하여 앱에 장치를 추가합니다."
+        },
+        {
+          "document_id": "SDT",
+          "location": "표 5.3.1.27-1, token",
+          "quote": "An authentication token, for example an OAuth token."
+        }
+      ]
+    },
+    {
+      "name": "타이머·예약·절전·고장 진단·주기 보고 설정",
+      "reason": "관련 SDT 모델은 있으나 제조사 본문에 해당 기능 지원이나 인터페이스가 없다.",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.90 timer",
+          "quote": "monitor and control the times"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.66 powerSave",
+          "quote": "enable the power saving mode"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.34 faultDetection",
+          "quote": "whether a fault has occurred"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.63 periodicalReportConfig",
+          "quote": "set parameters of periodic report"
+        }
+      ]
+    },
+    {
+      "name": "패키지 구성품·지원 연락처·생태계 배지",
+      "reason": "설명서·포장·사업자 안내이며 전구의 관리 가능한 기능이나 인스턴스 상태가 아니다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 구성품",
+          "quote": "LED 전구 T2 × 1, 사용 설명서 × 1"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "문의 정보",
+          "quote": "A/S 문의: 02-6949-2662, support@aqara.kr"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "Works with Apple 주석",
+          "quote": "Works with Apple 배지"
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "draft_scope",
+      "question": "정적 metadata provisioning을 우선 후보로 하고, 조명 제어와 수명주기 원격 실행은 추가 증거 확보 전 보류하는 DRAFT 범위를 승인할 것인가?",
+      "reason": "현재 문서는 원격 기능의 실제 호출·조회 인터페이스를 제공하지 않는다."
+    },
+    {
+      "id": "interface_selection",
+      "question": "IPE는 Zigbee 직접 연결, Aqara 허브 API, Matter 브리지 또는 Matter over Thread 중 어떤 경로를 사용할 것인가?",
+      "reason": "경로별 접근 권한·의존 인프라·기능 차이를 확정해야 한다."
+    },
+    {
+      "id": "device_protocol_evidence",
+      "question": "각 변형·모드의 endpoint, cluster, attribute, command, 타입, 접근 권한 및 보고 동작을 명시한 공식 문서는 무엇인가?",
+      "reason": "제공 본문만으로 프로토콜 식별자나 장치 측 R/W를 기입할 수 없다."
+    },
+    {
+      "id": "lighting_semantics",
+      "question": "On/Off, 밝기, CCT 및 LB-L01D 색상의 실제 지원 범위·단위·원시 표현·전환 동작은 무엇인가?",
+      "reason": "제품명과 로컬 호흡 표시만으로 제어 기능 및 변환식을 확정할 수 없다."
+    },
+    {
+      "id": "reset_semantics",
+      "question": "5회 전원 조작에 의한 네트워크 초기화와 프로토콜 전환 과정의 전체 삭제 효과는 어떤 단계에서 구별되는가?",
+      "reason": "네트워크 정보만 삭제한다는 표와 전환은 모든 데이터를 지운다는 문단을 절차별로 확인해야 한다."
+    },
+    {
+      "id": "remote_lifecycle",
+      "question": "장치 추가·네트워크 초기화·공장 초기화·프로토콜 전환에 공식 원격 API와 완료 확인 수단이 있는가?",
+      "reason": "현재 증거는 앱 및 물리 절차이며 oneM2M action 실행 가능성을 입증하지 않는다."
+    },
+    {
+      "id": "resource_model",
+      "question": "적용할 5.5 Device model, 5.8 관리 specialization, containerDefinition 및 XSD는 무엇이며 관리 표현은 mgmtObj와 flexNode 중 어느 방식을 선택할 것인가?",
+      "reason": "제공된 일반 매핑 규칙만으로 전용 모델·URI·리소스 이름을 확정할 수 없다."
+    },
+    {
+      "id": "custom_models",
+      "question": "직접 대응이 없는 프로토콜·초기화·CCT 후보에 custom 모델을 정의할 것인가, 추가 표준 모델 근거를 확보할 것인가?",
+      "reason": "초안의 custom 이름은 제안이며 등록된 표준 ModuleClass가 아니다."
+    },
+    {
+      "id": "synchronization_policy",
+      "question": "관측값과 명령 요청의 구별, 실패·통신 불능·미확인 상태, 갱신 시점 및 재등록 후 리소스 유지 정책은 어떻게 정할 것인가?",
+      "reason": "IPE의 동기화 책임은 표준에 있으나 장치별 상태 수집과 실패 의미는 제공되지 않는다."
+    },
+    {
+      "id": "metadata_policy",
+      "question": "metadata 문자열 형식, 출처 기록, 수정 권한 및 정적 문서값과 장치 관측값의 우선순위는 어떻게 정할 것인가?",
+      "reason": "features.metadata는 자유 문자열이며 구체적인 자산 스키마는 구현 제안이다."
+    },
+    {
+      "id": "document_versions",
+      "question": "AQARA 설명서의 발행 버전과 IW-EXPOSE·IW-RESOURCE의 정식 release를 확정할 수 있는가?",
+      "reason": "설명서 버전은 미상이고 TS-0033 자료는 latest URL의 2026-11-02 snapshot이므로 승인 기준 버전을 고정해야 한다."
+    }
+  ]
+}

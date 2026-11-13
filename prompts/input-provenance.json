@@ -1,0 +1,21 @@
+{
+  "note": "Task instruction extracted from frozen A input. Copyrighted document bodies not redistributed. Exact historical input cannot be reconstructed from current URLs alone.",
+  "A_input_sha256": "2414a8d32b9e819f4d3eb37b39a969f937565cd14ec407a7b502227179bebf5a",
+  "document_keys": [
+    "AQARA",
+    "ZCL",
+    "SDT",
+    "SDT-MAP",
+    "IW-EXPOSE",
+    "IW-RESOURCE"
+  ],
+  "request_model": "gpt-6.1-sol",
+  "conditions": {
+    "E": "Not executed: awaiting official device interface specification",
+    "B": "A minus ZCL",
+    "A": "Aqara manual + ZCL R8 + TS-0023 + TS-0033",
+    "C": "A minus TS-0023",
+    "F": "A plus ZCL 3.7 Scenes, 3.9 On/Off Switch Configuration, 3.11 Alarms",
+    "D": "A minus TS-0033"
+  }
+}

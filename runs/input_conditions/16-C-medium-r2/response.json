@@ -1,0 +1,1745 @@
+{
+  "device_variants": [
+    {
+      "model": "LB-L01E",
+      "product_name": "LED Bulb T2 (E26, CCT)",
+      "documented_scope": "E26, CCT로 명명된 변형이다. 제품명만으로 색온도 조절 범위나 원격 제어 인터페이스를 확정할 수 없다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름·모델 행",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, CCT 모델",
+          "quote": "모델명: LB-L01E"
+        }
+      ]
+    },
+    {
+      "model": "LB-L01D",
+      "product_name": "LED Bulb T2 (E26, RGB CCT)",
+      "documented_scope": "E26, RGB CCT로 명명된 변형이다. RGB 명칭은 ZCL의 hue/saturation, XY, enhanced hue, color loop 지원을 각각 입증하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름·모델 행",
+          "quote": "LED Bulb T2 (E26, RGB CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, RGB CCT 모델",
+          "quote": "모델명: LB-L01D"
+        }
+      ]
+    },
+    {
+      "models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "shared_documented_facts": {
+        "protocols": [
+          "Thread",
+          "Zigbee",
+          "Bluetooth LE(1M/2M)"
+        ],
+        "initial_protocol": "Thread",
+        "rated_power_W": 10.5,
+        "rated_voltage": "100 - 240 V~, 50/60 Hz",
+        "dimensions_mm": "60 × 108",
+        "operating_temperature_C": "-10 ~ 40",
+        "operating_humidity": "0 ~ 95% RH, 비결로 조건",
+        "manufacturer": "Lumi United Technology Co., Ltd.",
+        "country_of_manufacture": "중국"
+      },
+      "connectivity_scope": "Zigbee는 호환 Aqara 허브를 사용하며 허브의 Matter 브리지 경로가 설명된다. Thread는 Matter 생태계 통합 경로이며 Matter Controller와 Thread Border Router가 필요하다. 두 프로토콜의 동시 운용과 Bluetooth LE의 관리 기능은 확인되지 않는다.",
+      "draft_constraints": "이 결과는 DRAFT이다. 제조사 문서에는 endpoint, 지원 cluster·attribute·command 목록, Matter 데이터 모델, 허브 API가 없다. 제공된 oneM2M 문서는 SDT 기반 resource 선택 지침이며 TS-0023의 개별 ModuleClass·DataPoint·action 정의는 제공되지 않았다. 따라서 표준 SDT 식별자와 타입을 추정하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개",
+          "quote": "Zigbee와 Thread 듀얼 프로토콜을 지원하는 스마트 전구입니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개, Zigbee 모드 설명",
+          "quote": "허브의 Matter 브리지"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Zigbee 모드)",
+          "quote": "장치의 초기 상태는 Thread"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜 행",
+          "quote": "Bluetooth LE(1M/2M)(2402 MHz~ 2480 MHz)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전력 행",
+          "quote": "10.5W"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전압 행",
+          "quote": "100 - 240 V~, 50/60 Hz"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 크기 행",
+          "quote": "60 × 108mm"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 온도 행",
+          "quote": "-10 °C ~ 40 °C"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 습도 행",
+          "quote": "0 ~ 95% RH, 비결로 조건"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, 두 모델 공통",
+          "quote": "제조자: Lumi United Technology Co., Ltd."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, 두 모델 공통",
+          "quote": "제조국가: 중국"
+        }
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "id": "identity",
+      "name": "제품·모델·제조자 식별",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 장치 정보",
+      "description": "모델별 제품명과 제조자·제조국가·인증번호를 정적 메타데이터 후보로 포함한다. 개별 장치 식별자는 별도로 필요하다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "origin": "제조사 문서",
+        "remote_read": null,
+        "values": {
+          "LB-L01E": "R-R-LUt-LBL01E",
+          "LB-L01D": "R-R-LUt-LBL01D"
+        }
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "SDT 우선 검토. 정확한 표준 매핑은 보류하며 미확인 시 custom metadata 후보.",
+        "placement": "<node> 아래 [flexNode] <flexContainer>의 자식으로 표현하는 관리 경로 후보"
+      },
+      "direction": "문서 기반 provisioning → oneM2M",
+      "conversion": {
+        "documented": "모델별 문자열을 구분한다.",
+        "proposed_policy": "모델명이나 인증번호를 개별 장치의 고유 식별자로 사용하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, LB-L01E",
+          "quote": "인증번호: R-R-LUt-LBL01E"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "기자재 표시, LB-L01D",
+          "quote": "인증번호: R-R-LUt-LBL01D"
+        },
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, device management services",
+          "quote": "based on the SDT data model"
+        }
+      ],
+      "uncertainties": [
+        "TS-0023의 식별 정보 모델 정의와 실제 장치 고유 식별자 공급 경로가 없다."
+      ]
+    },
+    {
+      "id": "rated_specs",
+      "name": "정격·크기·사용 환경 한계",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "정적 장치 정보",
+      "description": "10.5 W, 100–240 V~ 50/60 Hz, 60 × 108 mm, -10–40 °C, 0–95% RH 비결로 조건을 문서 기반 사양으로 관리한다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "origin": "제품 사양 표",
+        "remote_read": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 SDT 확인 후 선택. 직접 모델이 없으면 custom 정적 사양 후보."
+      },
+      "direction": "문서 기반 provisioning → oneM2M",
+      "conversion": {
+        "documented": "문서의 단위와 범위를 보존한다.",
+        "proposed_policy": "값·단위·정격 또는 환경 한계라는 의미를 함께 저장한다. 실시간 측정값으로 취급하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전력",
+          "quote": "10.5W"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전압",
+          "quote": "100 - 240 V~, 50/60 Hz"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 습도",
+          "quote": "0 ~ 95% RH, 비결로 조건"
+        }
+      ],
+      "uncertainties": [
+        "사양별 표준 SDT 표현과 타입이 제공되지 않았다."
+      ]
+    },
+    {
+      "id": "protocol_capability",
+      "name": "통신 지원과 연결 경로",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "연결 관리",
+      "description": "지원 프로토콜과 허브·Controller·Border Router 의존성을 정적 capability로 포함한다. 현재 활성 프로토콜은 별도 항목이다.",
+      "evidence_status": "device_documented",
+      "decision": "map_candidate",
+      "source_interface": {
+        "documented_protocols": [
+          "Thread 2405–2480 MHz",
+          "Zigbee 2405–2480 MHz",
+          "Bluetooth LE(1M/2M) 2402–2480 MHz"
+        ],
+        "Zigbee_path": "호환 Aqara 허브, 허브 Matter 브리지 경로",
+        "Thread_path": "Matter Controller 및 Thread Border Router",
+        "management_API": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 SDT 확인 전 custom capability 표현 후보"
+      },
+      "direction": "문서 기반 provisioning → oneM2M",
+      "conversion": {
+        "documented": null,
+        "proposed_policy": "지원 여부와 현재 연결 상태를 분리한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개, 각주",
+          "quote": "호환되는 Aqara 허브가 필요합니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Matter 생태계",
+          "quote": "Matter Controller와 Thread Border Router가 필요합니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜",
+          "quote": "Bluetooth LE(1M/2M)"
+        }
+      ],
+      "uncertainties": [
+        "Bluetooth LE의 용도·서비스와 두 주 프로토콜의 동시 사용 여부는 미기재이다."
+      ]
+    },
+    {
+      "id": "protocol_switch",
+      "name": "활성 프로토콜 조회·전환",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "연결 관리",
+      "description": "초기 Thread 및 Aqara Home의 프로토콜 전환 절차는 문서화되어 있다. 데이터 삭제를 수반하는 전환은 원격 관리 action 확정 전 보류한다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "Aqara Home 앱",
+        "procedure": "장치 제거 또는 전원 5회 재인가 후 연결 과정에서 프로토콜 선택",
+        "active_protocol_read": null,
+        "remote_command": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 직접 매핑 미확인. custom 상태·전환 action 후보."
+      },
+      "direction": "조회는 장치 → oneM2M, 전환은 oneM2M → 장치의 조건부 후보",
+      "conversion": {
+        "documented": "프로토콜 전환은 공장 설정 복원과 같으며 모든 설정과 데이터를 지운다.",
+        "proposed_policy": "초기 Thread를 현재 상태로 보고하지 않는다. 전환 후 재연결과 resource 생명주기 정책을 별도 결정한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Zigbee 모드",
+          "quote": "장치의 초기 상태는 Thread"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "프로토콜을 전환하는 방법, 참고",
+          "quote": "모든 설정과 데이터가 지워집니다."
+        }
+      ],
+      "uncertainties": [
+        "전원 5회 초기화의 효과가 네트워크 초기화 표와 다르게 서술된다.",
+        "프로그래밍 가능한 전환 인터페이스가 없다."
+      ]
+    },
+    {
+      "id": "commissioning",
+      "name": "장치 추가·연결 모드",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "연결 관리",
+      "description": "전원 인가 후 두 번의 호흡 주기는 연결 모드 표시이다. 코드 기반 등록은 설치 절차로 문서화되지만 원격 commissioning action이나 연결 상태 조회는 확인되지 않는다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "Matter 호환 앱 또는 Aqara Home",
+        "inputs": "Matter 코드 스캔 또는 설정 코드 입력",
+        "observable_indicator": "두 번의 호흡 주기",
+        "remote_status_or_action": null
+      },
+      "target": {
+        "resource_type": null,
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "관리 API와 표준 모델 확인 전 보류"
+      },
+      "direction": null,
+      "conversion": {
+        "documented": "호흡 표시는 장치 연결 모드 진입을 뜻한다.",
+        "proposed_policy": "광학적 표시를 원격 보고 event나 범용 조명 효과로 확대하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3",
+          "quote": "장치 연결 모드에 들어왔음을 나타냅니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Matter 생태계 2",
+          "quote": "Matter 코드를 스캔하거나 설정 코드를"
+        }
+      ],
+      "uncertainties": [
+        "연결 모드의 원격 감지, 등록 결과 조회, 실패 상태 표현이 없다."
+      ]
+    },
+    {
+      "id": "network_reset",
+      "name": "네트워크 초기화",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "초기화",
+      "description": "1초 간격 전원 5회 껐다 켜기는 표에서 네트워크 연결정보만 삭제하는 절차이다.",
+      "evidence_status": "unresolved",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "물리 전원 조작",
+        "count": 5,
+        "interval_seconds": 1,
+        "remote_command": null
+      },
+      "target": {
+        "resource_type": null,
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 reset 모델 미확인. custom action도 효과 확인 전 보류."
+      },
+      "direction": null,
+      "conversion": {
+        "documented": "초기화 표는 다른 설정·기록 보존을 명시한다.",
+        "proposed_policy": "공장 초기화와 별도 의미로 유지하되 상충 서술을 해결하기 전 노출하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 전원 5회 행",
+          "quote": "네트워크 연결정보만 삭제합니다."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "프로토콜을 전환하는 방법",
+          "quote": "장치의 전원을 5번"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "프로토콜을 전환하는 방법, 참고",
+          "quote": "공장 설정을 복원하는 것과 같으며"
+        }
+      ],
+      "uncertainties": [
+        "5회 조작 자체와 후속 프로토콜 전환의 삭제 효과를 구분한 제조사 확인이 필요하다.",
+        "원격 호출 경로가 없다."
+      ]
+    },
+    {
+      "id": "factory_reset",
+      "name": "공장 초기화",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "초기화",
+      "description": "1초 간격 전원 10회 껐다 켜기는 모든 구성과 데이터를 지우는 별도 절차이다.",
+      "evidence_status": "device_documented",
+      "decision": "defer",
+      "source_interface": {
+        "interface": "물리 전원 조작",
+        "count": 10,
+        "interval_seconds": 1,
+        "remote_command": null
+      },
+      "target": {
+        "resource_type": null,
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 관리 모델 및 원격 API 확인 전 보류"
+      },
+      "direction": null,
+      "conversion": {
+        "documented": "모든 구성과 데이터를 삭제한다.",
+        "proposed_policy": "향후 원격 action이 확인되면 삭제 범위와 oneM2M 표현의 제거·재등록 정책을 승인한다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표, 전원 10회 행",
+          "quote": "모든 구성과 데이터를 지우고"
+        }
+      ],
+      "uncertainties": [
+        "공장 초기화의 원격 명령과 완료 확인 수단이 없다."
+      ]
+    },
+    {
+      "id": "on_off",
+      "name": "점등 상태·On·Off·Toggle",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "기본 조명",
+      "description": "핵심 관리 범위 후보이다. ZCL은 상태와 제어를 정의하지만 제조사 문서는 해당 cluster의 실제 구현을 확인하지 않는다.",
+      "evidence_status": "standard_only",
+      "decision": "map_candidate",
+      "source_interface": {
+        "scope": "Zigbee 구현 확인 시",
+        "endpoint": null,
+        "cluster": "0x0006 On/Off",
+        "attribute": "0x0000 OnOff, bool, RPS",
+        "commands": {
+          "0x00": "Off",
+          "0x01": "On",
+          "0x02": "Toggle"
+        },
+        "command_payload": "없음",
+        "Matter_interface": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "home domain의 표준 SDT 우선. TS-0023 정의가 없어 직접 매핑 미확정."
+      },
+      "direction": "상태: 장치 → oneM2M; 제어: oneM2M → 장치",
+      "conversion": {
+        "documented": "OnOff의 0은 Off, 1은 On이다. 상태 attribute는 읽기이며 제어는 command로 수행한다.",
+        "proposed_policy": "목표 boolean 상태와 Toggle action을 구분한다. 명령 전송만으로 관측 상태를 성공으로 갱신하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.2.1, line 5068",
+          "quote": "0 = Off, 1 = On."
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3, Table 3-47",
+          "quote": "Toggle"
+        },
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, vertical domain services",
+          "quote": "Specialized <flexContainer> resource types for moduleClasses shall be used"
+        }
+      ],
+      "uncertainties": [
+        "두 모델의 실제 지원과 접근 경로가 없다.",
+        "Off는 전구의 주전원 차단 또는 소비전력 0을 뜻한다고 볼 수 없다."
+      ]
+    },
+    {
+      "id": "brightness",
+      "name": "밝기 상태·목표 밝기",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "기본 조명",
+      "description": "핵심 조건부 후보이다. 설치 시 밝아짐·어두워짐은 확인되지만 사용자 원격 디밍과 ZCL 구현의 증거는 아니다.",
+      "evidence_status": "standard_only",
+      "decision": "map_candidate",
+      "source_interface": {
+        "scope": "Zigbee 구현 확인 시",
+        "endpoint": null,
+        "cluster": "0x0008 Level Control for Lighting",
+        "attribute": "0x0000 CurrentLevel, uint8, RPS; 1–0xfe, 0xff undefined",
+        "commands": "0x00 Move to Level, 0x04 Move to Level (with On/Off)",
+        "payload": "Level:uint8, Transition time:uint16, OptionsMask:map8, OptionsOverride:map8"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 SDT 우선, 직접 매핑 미확정"
+      },
+      "direction": "상태: 장치 → oneM2M; 목표: oneM2M → 장치",
+      "conversion": {
+        "documented": "1은 최소, 254는 최대, 0은 사용 금지, 255는 undefined이다. 중간 gradation은 application specific이다.",
+        "proposed_policy": "0–100 표현이 필요하면 L×100/254 등의 정규화와 반올림을 별도 승인한다. 이를 광속의 선형 백분율로 주장하지 않는다. 0%와 Off의 관계는 별도 결정한다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.19.2.2.1, lines 7566–7570",
+          "quote": "All other values are application specific gradations"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.3.1.1, Figure 3-40",
+          "quote": "OptionsMask"
+        }
+      ],
+      "uncertainties": [
+        "실제 최소 디밍·밝기 곡선·지원 명령이 없다.",
+        "표준 SDT의 타입·범위·단위가 없다."
+      ]
+    },
+    {
+      "id": "level_motion",
+      "name": "밝기 연속 이동·증감·정지",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 전이",
+      "description": "목표 밝기 설정과 의미가 다른 Move·Step·Stop action 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0008",
+        "commands": {
+          "0x01/0x05": "Move / with On/Off; Move mode:enum8, Rate:uint8",
+          "0x02/0x06": "Step / with On/Off; Step mode:enum8, Step size:uint8, Transition time:uint16",
+          "0x03/0x07": "Stop"
+        },
+        "common_payload_fields": "OptionsMask:map8, OptionsOverride:map8",
+        "endpoint": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 action 확인 후 선택, 없으면 custom action 후보"
+      },
+      "direction": "oneM2M → 장치",
+      "conversion": {
+        "documented": "Move rate는 level units/s이다. Step transition은 0.1 s 단위이다. Stop은 현재 level을 유지하고 RemainingTime을 0으로 한다. 두 Stop command는 동일하다.",
+        "proposed_policy": "Stop을 Off로 변환하지 않는다. Rate=0xff의 DefaultMoveRate 대체 의미를 보존한다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.3.2.3, line 5423",
+          "quote": "units per second"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.3.4.2, lines 5460–5466",
+          "quote": "the Stop commands are identical"
+        }
+      ],
+      "uncertainties": [
+        "실제 command 지원과 대응 SDT action이 확인되지 않는다."
+      ]
+    },
+    {
+      "id": "level_onoff_options",
+      "name": "밝기·점등 연동과 ExecuteIfOff",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 동작 설정",
+      "description": "밝기 변경 시 점등 연동 여부와 꺼진 상태에서 실행할지 결정하는 의미를 별도로 보존한다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0008",
+        "attribute": "0x000f Options, map8, RW; bit 0 ExecuteIfOff",
+        "command_variants": "without On/Off 및 with On/Off",
+        "override": "OptionsMask 및 OptionsOverride"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 직접 모델 미확인. custom 설정 또는 명령 옵션 후보."
+      },
+      "direction": "설정 조회: 장치 → oneM2M; 설정·옵션: oneM2M → 장치",
+      "conversion": {
+        "documented": "without On/Off 명령은 OnOff를 변경하지 않으며 with On/Off 변형은 연동한다. ExecuteIfOff는 꺼진 상태의 실행을 제어한다.",
+        "proposed_policy": "일반 밝기 요청에 사용할 명령 변형과 override 기본값을 승인한다. 명령 옵션을 영구 설정 변경으로 바꾸지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.1.2, lines 5304–5306",
+          "quote": "the second set ('with On/Off' variants) SHALL."
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2.8, line 5343",
+          "quote": "meant to be changed only during commissioning"
+        }
+      ],
+      "uncertainties": [
+        "실제 Options 값과 명령 처리 방식이 없다.",
+        "3.19.4 예시 중 without On/Off Down 결과는 독립성 본문과 일관되지 않아 확인이 필요하다."
+      ]
+    },
+    {
+      "id": "level_transition_settings",
+      "name": "점등 밝기·전이 시간·기본 이동 속도",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 동작 설정",
+      "description": "OnLevel, OnOffTransitionTime, OnTransitionTime, OffTransitionTime, DefaultMoveRate는 점등 및 전이 기본 동작 설정 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0008",
+        "attributes": {
+          "0x0010": "OnOffTransitionTime:uint16 RW",
+          "0x0011": "OnLevel:uint8 RW",
+          "0x0012": "OnTransitionTime:uint16 RW",
+          "0x0013": "OffTransitionTime:uint16 RW",
+          "0x0014": "DefaultMoveRate:uint8 RW"
+        },
+        "device_support": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 확인 전 custom 설정 후보"
+      },
+      "direction": "조회: 장치 → oneM2M; 설정: oneM2M → 장치",
+      "conversion": {
+        "documented": "시간 attribute는 0.1 s 단위, DefaultMoveRate는 units/s이다. OnLevel 비구현 또는 non-value는 효과가 없다. On/OffTransitionTime 대체 규칙과 명령별 0xffff 의미는 서로 구별해야 한다.",
+        "proposed_policy": "일반 시간값과 sentinel을 분리하며 명령별 fallback을 보존한다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2, Table 3-56",
+          "quote": "OnOffTransitionTime"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2.10, line 5367",
+          "quote": "it has no effect"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2.13, line 5380",
+          "quote": "in units per second"
+        }
+      ],
+      "uncertainties": [
+        "모두 장치 구현 미확인이다.",
+        "OnTransitionTime·OffTransitionTime의 표 범위와 0xffff 기본값 간 차이는 sentinel 해석 확인이 필요하다."
+      ]
+    },
+    {
+      "id": "startup_onoff",
+      "name": "전원 복구 시 점등 정책",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "전원 복구 설정",
+      "description": "일반 OnOff와 별도인 StartUpOnOff 설정 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0006",
+        "attribute": "0x4003 StartUpOnOff, enum8, RW, optional"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom enum 설정 후보"
+      },
+      "direction": "조회: 장치 → oneM2M; 설정: oneM2M → 장치",
+      "conversion": {
+        "documented": "0x00 Off, 0x01 On, 0x02 이전 상태 반전, 0xff 이전 상태 복원, 0x03–0xfe reserved이다.",
+        "proposed_policy": "boolean으로 축약하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.2.5, Table 3-46",
+          "quote": "Set the OnOff attribute to its previous value."
+        }
+      ],
+      "uncertainties": [
+        "장치 지원과 제조사 기본값이 없다. 연결 모드의 호흡 동작과 혼동하면 안 된다."
+      ]
+    },
+    {
+      "id": "startup_level",
+      "name": "전원 복구 시 밝기 정책",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "전원 복구 설정",
+      "description": "StartUpCurrentLevel은 현재 밝기와 별도인 시작 설정 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0008",
+        "attribute": "0x4000 StartUpCurrentLevel, uint8, RW, optional"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom 설정 후보"
+      },
+      "direction": "조회: 장치 → oneM2M; 설정: oneM2M → 장치",
+      "conversion": {
+        "documented": "0x00은 허용 최소 level, 0xff는 이전 level, 나머지는 지정 level이다.",
+        "proposed_policy": "0x00을 Off나 일반 백분율 0으로 변환하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2.14, Table 3-58",
+          "quote": "Set the CurrentLevel attribute to its previous value"
+        }
+      ],
+      "uncertainties": [
+        "장치 구현과 목표 SDT의 시작 정책 표현이 없다."
+      ]
+    },
+    {
+      "id": "timed_on",
+      "name": "시간 제한 점등·재점등 보호",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "시간 기반 조명",
+      "description": "OnTime·OffWaitTime과 On With Timed Off는 일반 예약 스케줄과 다른 상태 의존 기능이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0006",
+        "attributes": "0x4001 OnTime:uint16 RW; 0x4002 OffWaitTime:uint16 RW",
+        "command": "0x42 On With Timed Off",
+        "payload": "On/off Control:uint8, On Time:uint16, Off Wait Time:uint16",
+        "control_bit": "bit 0 Accept Only When On"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 action 미확인, custom timed action 후보"
+      },
+      "direction": "시간 상태: 장치 → oneM2M; 설정·명령: oneM2M → 장치",
+      "conversion": {
+        "documented": "시간은 0.1 s 단위이다. 명령 시간 범위는 0x0000–0xfffe이며 attribute sentinel 및 기존 상태와의 min/max 갱신 규칙이 있다.",
+        "proposed_policy": "단순 지연 Off나 달력 스케줄로 치환하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3.6, lines 5156–5158",
+          "quote": "with a guarded off duration"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3.6.2, line 5174",
+          "quote": "0x0000 to 0xfffe"
+        }
+      ],
+      "uncertainties": [
+        "optional 기능의 실제 지원과 목표 action 의미가 없다."
+      ]
+    },
+    {
+      "id": "off_effect",
+      "name": "소등 fading 효과",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 효과",
+      "description": "Off With Effect는 일반 Off와 구별되는 선택 기능이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0006",
+        "command": "0x40 Off With Effect",
+        "payload": "Effect identifier:uint8, Effect variant:uint8"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom effect action 후보"
+      },
+      "direction": "oneM2M → 장치",
+      "conversion": {
+        "documented": "identifier 0x00 Delayed All Off, 0x01 Dying Light이며 variant별 시간이 정의된다. global scene 저장 부수 효과가 있다.",
+        "proposed_policy": "효과 식별자·variant·부수 효과를 함께 보존한다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3.4, line 5122",
+          "quote": "enhanced ways of fading"
+        }
+      ],
+      "uncertainties": [
+        "장치 지원을 설치 시 호흡 표시로 대신 입증할 수 없다."
+      ]
+    },
+    {
+      "id": "global_scene",
+      "name": "전역 장면 저장 상태·복원",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "장면 복원",
+      "description": "GlobalSceneControl과 On With Recall Global Scene을 하나의 복원 기능으로 검토한다. 임의 장면 생성·목록 관리로 확대하지 않는다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0006",
+        "attribute": "0x4000 GlobalSceneControl, bool, R",
+        "command": "0x41 On With Recall Global Scene, payload 없음"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom 복원 action 후보"
+      },
+      "direction": "상태: 장치 → oneM2M; 복원: oneM2M → 장치",
+      "conversion": {
+        "documented": "전역 장면은 group identifier 0 및 scene identifier 0이다. GlobalSceneControl 값에 따라 복원 명령이 무시되거나 실행된다.",
+        "proposed_policy": "GlobalSceneControl을 일반적인 장면 활성 boolean으로 이름 붙이지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3.5, lines 5144–5145",
+          "quote": "recall of the settings when the device was turned off"
+        }
+      ],
+      "uncertainties": [
+        "실제 지원, 저장 대상 설정, Scenes cluster 구현이 없다."
+      ]
+    },
+    {
+      "id": "color_temperature",
+      "name": "색온도 상태·목표 색온도",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "색 제어",
+      "description": "두 제품명의 CCT를 근거로 핵심 조건부 후보로 포함한다. 실제 원격 CCT 지원·범위와 ZCL 구현은 별도 확인 대상이다.",
+      "evidence_status": "standard_only",
+      "decision": "map_candidate",
+      "source_interface": {
+        "cluster": "0x0300 Color Control",
+        "attribute": "0x0007 ColorTemperatureMireds, uint16, RPS",
+        "command": "0x0a Move to Color Temperature",
+        "payload": "Color Temperature Mireds:uint16, Transition Time:uint16, OptionsMask:map8, OptionsOverride:map8",
+        "support_condition": "ColorCapabilities bit 4",
+        "endpoint": null,
+        "Matter_interface": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 SDT 우선、직접 매핑 미확정"
+      },
+      "direction": "상태: 장치 → oneM2M; 목표: oneM2M → 장치",
+      "conversion": {
+        "documented": "K=1000000/mired, 유효 변환 범위 1–65279이다. 현재값 0은 undefined, 0xffff는 invalid이다. Transition Time은 0.1 s 단위이다.",
+        "proposed_policy": "역변환의 정수 반올림과 입력 거부·clipping 정책은 승인한다. 표준의 전체 숫자 범위를 제품의 실제 색온도 범위로 사용하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름",
+          "quote": "LED Bulb T2 (E26, RGB CCT)"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.8, line 8869",
+          "quote": "Color temperature in kelvins = 1,000,000 / ColorTemperatureMireds"
+        }
+      ],
+      "uncertainties": [
+        "제품의 실제 K 범위, 지원 command, 목표 SDT 단위·타입이 없다."
+      ]
+    },
+    {
+      "id": "color_capability_limits",
+      "name": "색 지원 capability·물리 색온도 범위",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "기능 발견",
+      "description": "색 표현별 지원 판별과 유효 색온도 범위를 얻는 조건부 후보이다. 정적 제품명보다 세부적인 protocol capability이다.",
+      "evidence_status": "standard_only",
+      "decision": "map_candidate",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attributes": {
+          "0x400a": "ColorCapabilities:map16 R, bits 0–4",
+          "0x400b": "ColorTempPhysicalMinMireds:uint16 R",
+          "0x400c": "ColorTempPhysicalMaxMireds:uint16 R"
+        },
+        "actual_values": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 capability 모델 확인 전 custom 메타데이터 후보"
+      },
+      "direction": "장치 → oneM2M",
+      "conversion": {
+        "documented": "bits 0/1/2/3/4는 hue/saturation, enhanced hue, color loop, XY, color temperature이다. 최소 mired는 최대 K, 최대 mired는 최소 K이다.",
+        "proposed_policy": "확인된 지원만 노출한다. 0 또는 미확인 범위는 실제 하드웨어 한계로 단정하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.18, lines 8933–8935",
+          "quote": "If a bit is set to 1"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.19, line 8944",
+          "quote": "corresponds to the maximum color temperature in kelvins"
+        }
+      ],
+      "uncertainties": [
+        "실제 attribute 값과 non-Zigbee 경로의 동등 capability 인터페이스가 없다."
+      ]
+    },
+    {
+      "id": "hue_saturation",
+      "name": "Hue·Saturation 상태와 목표 색",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "색 제어",
+      "description": "RGB CCT 변형의 조건부 색 제어 후보이다. RGB 채널값 자체의 protocol attribute가 문서에 제시된 것은 아니다.",
+      "evidence_status": "standard_only",
+      "decision": "map_candidate",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attributes": "0x0000 CurrentHue:uint8 RP; 0x0001 CurrentSaturation:uint8 RPS; 각 0–254",
+        "commands": "0x00 Move to Hue; 0x03 Move to Saturation; 0x06 Move to Hue and Saturation",
+        "payload": "Hue/Saturation:uint8, Transition Time:uint16, OptionsMask:map8, OptionsOverride:map8; Move to Hue에는 Direction:enum8 추가",
+        "support_condition": "ColorCapabilities bit 0",
+        "endpoint": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 SDT 우선. HS 직접 모델 확인 전 RGB 모델로의 변환은 보류."
+      },
+      "direction": "상태: 장치 → oneM2M; 목표: oneM2M → 장치",
+      "conversion": {
+        "documented": "Hue[degree]=CurrentHue×360/254; Saturation=CurrentSaturation/254이다. HSV 해석은 권고이며 luminance는 별도 Level Control이다.",
+        "proposed_policy": "목표 단위에 따른 역변환·반올림·hue 순환 정책을 승인한다. 임의 RGB 변환식을 추가하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.1, line 8834",
+          "quote": "Hue = CurrentHue x 360 / 254"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.2, line 8841",
+          "quote": "Saturation = CurrentSaturation/254"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.1, line 8792",
+          "quote": "Control over luminance is not included"
+        }
+      ],
+      "uncertainties": [
+        "LB-L01D의 HS 지원은 RGB 제품명만으로 확정할 수 없다.",
+        "LB-L01E로 확대할 제조사 근거가 없다."
+      ]
+    },
+    {
+      "id": "xy_color",
+      "name": "CIE XY 상태·목표 좌표",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "색 제어",
+      "description": "HS와 다른 색 표현이다. 색 제어 표준의 정의를 제품 지원 사실로 취급하지 않고 capability 확인까지 보류한다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attributes": "0x0003 CurrentX:uint16 RPS; 0x0004 CurrentY:uint16 RPS; 0–0xfeff",
+        "command": "0x07 Move to Color",
+        "payload": "ColorX:uint16, ColorY:uint16, Transition Time:uint16, OptionsMask:map8, OptionsOverride:map8",
+        "support_condition": "ColorCapabilities bit 3"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 XY 모델 미확인. 직접 모델 부재 시 custom 좌표 모델 후보."
+      },
+      "direction": "상태: 장치 → oneM2M; 목표: oneM2M → 장치",
+      "conversion": {
+        "documented": "x=CurrentX/65536, y=CurrentY/65536이다. 하드웨어 범위 내 가장 가까운 색 선택은 장치에 맡겨진다.",
+        "proposed_policy": "gamut·white point 없이 RGB·HS와의 정확한 등가 변환을 주장하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.4, line 8850",
+          "quote": "x = CurrentX / 65536"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.5, line 8855",
+          "quote": "y = CurrentY / 65536"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.18, Table 5.8",
+          "quote": "XY attributes supported"
+        }
+      ],
+      "uncertainties": [
+        "실제 XY 지원과 gamut이 없다.",
+        "CCT 변형에서의 XY 지원 여부도 미확인으로 남긴다."
+      ]
+    },
+    {
+      "id": "color_motion",
+      "name": "색 연속 이동·증감·정지",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "조명 전이",
+      "description": "HS 및 XY의 상대·연속 이동은 절대 목표 설정과 별도 action 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "commands": "0x01 Move Hue; 0x02 Step Hue; 0x04 Move Saturation; 0x05 Step Saturation; 0x08 Move Color; 0x09 Step Color; 0x47 Stop Move Step",
+        "payload_types": "HS mode:enum8, rate/step:uint8; XY rate/step:int16; OptionsMask/OptionsOverride:map8",
+        "transition_time_types": "Step Hue及びStep Saturation:uint8; Step Color:uint16",
+        "support_condition": "각 색 capability에 종속"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 action 확인 전 custom 이동 action 후보"
+      },
+      "direction": "oneM2M → 장치",
+      "conversion": {
+        "documented": "rate는 원시 attribute units/s, transition은 0.1 s 단위이다. hue는 순환하고 saturation은 경계에서 멈춘다. Stop Move Step은 color loop를 정지하지 않는다.",
+        "proposed_policy": "서로 다른 mode 부호와 필드 폭을 통일된 wire 값으로 가정하지 않는다. XY rate/step 정규화 시 65536으로 나눈다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.3.12.1, Figure 5-10",
+          "quote": "int16"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.3.20, line 9441",
+          "quote": "has no effect on an active color loop"
+        }
+      ],
+      "uncertainties": [
+        "개별 command와 stop 범위의 실제 구현을 확인해야 한다."
+      ]
+    },
+    {
+      "id": "temperature_motion",
+      "name": "색온도 연속 이동·증감·정지",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 전이",
+      "description": "mired 기준 rate·step 및 동작별 경계를 가진 색온도 action 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "commands": "0x4b Move Color Temperature; 0x4c Step Color Temperature; 0x47 Stop Move Step",
+        "payload": "Move/Step Mode:map8, Rate 또는 Step Size:uint16, Minimum/Maximum Mireds:uint16, OptionsMask/OptionsOverride:map8; Step에는 Transition Time:uint16"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 action 미확인, custom 후보"
+      },
+      "direction": "oneM2M → 장치",
+      "conversion": {
+        "documented": "Up은 mired 증가이므로 K 감소이다. rate는 mired units/s이며 K/s와 선형 등가가 아니다. 경계 필드 0은 해당 물리 한계를 사용한다.",
+        "proposed_policy": "따뜻하게·차갑게 등의 방향 이름을 쓸 경우 mired와 K의 방향 반전을 명시한다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.3.21.6, Table 5.27",
+          "quote": "Increase the ColorTemperatureMireds attribute"
+        }
+      ],
+      "uncertainties": [
+        "실제 command 지원·허용 경계가 없다."
+      ]
+    },
+    {
+      "id": "color_mode_options",
+      "name": "활성 색 모드·꺼진 상태의 색 명령 정책",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 동작 설정",
+      "description": "ColorMode·EnhancedColorMode는 현재 색 표현의 지표이고 Options는 command 처리 설정이다. 양자를 직접 색값으로 매핑하지 않는다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attributes": "0x0008 ColorMode:enum8 R; 0x4001 EnhancedColorMode:enum8 R; 0x000f Options:map8 RW",
+        "option": "bit 0 ExecuteIfOff",
+        "override": "OptionsMask/OptionsOverride"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 모드·옵션 모델 미확인, custom 후보"
+      },
+      "direction": "모드: 장치 → oneM2M; 옵션: 양방향",
+      "conversion": {
+        "documented": "ColorMode 0/1/2는 HS/XY/CCT, EnhancedColorMode 3은 enhanced hue이다. ColorMode는 직접 쓸 수 없고 명령으로 바뀐다.",
+        "proposed_policy": "모드 전환을 실제 색 command로 처리할지 정한다. 꺼진 상태의 실행 정책은 상충 본문 확인 전 확정하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.9, line 8879",
+          "quote": "cannot be written directly"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.10, Table 5.6",
+          "quote": "ExecuteIfOff"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.3.1, lines 9052–9053",
+          "quote": "the command SHALL be ignored."
+        }
+      ],
+      "uncertainties": [
+        "ExecuteIfOff 조건과 꺼진 상태에서 무조건 무시한다는 generic usage 서술의 적용 관계가 불명확하다.",
+        "색 모드 전환 시 표현 불가능한 색의 처리도 manufacturer dependent이다."
+      ]
+    },
+    {
+      "id": "enhanced_hue",
+      "name": "Enhanced hue",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "고급 색 제어",
+      "description": "16비트 enhanced hue는 일반 hue와 의미가 달라 별도로 보류한다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attribute": "0x4000 EnhancedCurrentHue:uint16 RS",
+        "commands": "0x40 Enhanced Move to Hue; 0x41 Enhanced Move Hue; 0x42 Enhanced Step Hue; 0x43 Enhanced Move to Hue and Saturation",
+        "support_condition": "ColorCapabilities bit 1; HS도 지원 필요"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "직접 표준 모델 미확인, custom 원시값·action 후보"
+      },
+      "direction": "상태: 장치 → oneM2M; 제어: oneM2M → 장치",
+      "conversion": {
+        "documented": "CIE 색 삼각형의 비등간격 step이며 상위 8비트는 구현별 XY lookup index, 하위 8비트는 보간에 사용된다.",
+        "proposed_policy": "원시값×360/65535를 문서화된 degree 변환으로 사용하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.11, lines 8898–8902",
+          "quote": "non-equidistant steps"
+        }
+      ],
+      "uncertainties": [
+        "지원 여부와 구현별 lookup이 없다."
+      ]
+    },
+    {
+      "id": "color_loop",
+      "name": "색 순환 효과",
+      "applicable_models": [
+        "LB-L01D"
+      ],
+      "category": "고급 색 제어",
+      "description": "활성 상태·방향·주기·시작 hue·복원 hue와 Color Loop Set을 묶은 기능 후보이다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attributes": "0x4002 Active:uint8 RS; 0x4003 Direction:uint8 RS; 0x4004 Time:uint16 RS; 0x4005 StartEnhancedHue:uint16 R; 0x4006 StoredEnhancedHue:uint16 R",
+        "command": "0x44 Color Loop Set",
+        "payload": "Update Flags:map8, Action:enum8, Direction:enum8, Time:uint16, Start Hue:uint16, OptionsMask/OptionsOverride:map8",
+        "support_condition": "ColorCapabilities bit 2; enhanced hue도 지원 필요"
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom 복합 기능 후보"
+      },
+      "direction": "상태: 장치 → oneM2M; 제어: oneM2M → 장치",
+      "conversion": {
+        "documented": "Time은 전체 순환의 초 단위이다. Update Flags가 적용 필드를 결정한다. 비활성화는 저장된 enhanced hue를 복원한다.",
+        "proposed_policy": "일반 색 이동이나 Stop Move Step을 loop 해제와 동일시하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.15, line 8923",
+          "quote": "number of seconds"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.3.19.7, lines 9425–9427",
+          "quote": "ColorLoopStoredEnhancedHue attribute"
+        }
+      ],
+      "uncertainties": [
+        "RGB 명칭만으로 이 효과의 지원을 확정할 수 없다."
+      ]
+    },
+    {
+      "id": "level_temperature_coupling",
+      "name": "밝기와 색온도 결합",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "조명 동작 설정",
+      "description": "밝기 변화가 색온도를 바꾸는 선택 동작 후보이다. 단순한 두 DataPoint의 동시 설정과 다르다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "attributes": "0x0008 Options bit 1 CoupleColorTempToLevel; 0x0300/0x400d CoupleColorTempToLevelMinMireds:uint16 R",
+        "condition": "동일 endpoint의 Level Control 및 Color Control, CCT mode",
+        "actual_relationship": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom 결합 설정 후보"
+      },
+      "direction": "설정 조회·변경: 양방향 후보; 변화 결과: 장치 → oneM2M",
+      "conversion": {
+        "documented": "관계는 manufacturer specific이며 level → CCT의 단방향이다. 최대 level은 CoupleColorTempToLevelMinMireds에 대응한다.",
+        "proposed_policy": "일반 선형 곡선이나 양방향 결합을 만들어 넣지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.1.1, lines 8809–8813",
+          "quote": "This relationship is manufacturer specific"
+        }
+      ],
+      "uncertainties": [
+        "장치 구현과 결합 곡선이 없다."
+      ]
+    },
+    {
+      "id": "startup_temperature",
+      "name": "전원 복구 시 색온도 정책",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "전원 복구 설정",
+      "description": "StartUpColorTemperatureMireds는 현재 색온도와 별도인 시작 설정이다.",
+      "evidence_status": "unresolved",
+      "decision": "defer",
+      "source_interface": {
+        "cluster": "0x0300",
+        "attribute": "0x4010 StartUpColorTemperatureMireds:uint16 RW",
+        "device_support": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 미확인, custom 설정 후보이나 범위 충돌 해결 필요"
+      },
+      "direction": "조회: 장치 → oneM2M; 설정: oneM2M → 장치",
+      "conversion": {
+        "documented": "시작 시 ColorMode·EnhancedColorMode를 CCT로 설정하며 Table 5.9에서 0xffff는 이전값 복원이다.",
+        "proposed_policy": "직접 mired값과 복원 sentinel을 분리한다. 충돌하는 범위를 임의 정정하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1, Table 5.3, 0x4010",
+          "quote": "0x0000-0xfeff"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.22, Table 5.9",
+          "quote": "0x0000 – 0xffef"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.22, Table 5.9",
+          "quote": "0xffff"
+        }
+      ],
+      "uncertainties": [
+        "Table 5.3과 Table 5.9의 범위가 다르며 현재 CCT의 undefined·invalid 의미와도 구별해야 한다.",
+        "실제 장치 지원은 미확인이다."
+      ]
+    },
+    {
+      "id": "transition_remaining",
+      "name": "밝기·색 전이 잔여시간",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "동작 관측",
+      "description": "Level과 Color의 RemainingTime은 서로 다른 동작 상태이므로 별도 인스턴스 의미를 유지한다.",
+      "evidence_status": "standard_only",
+      "decision": "defer",
+      "source_interface": {
+        "attributes": "0x0008/0x0001 RemainingTime:uint16 R, 0–0xffff; 0x0300/0x0002 RemainingTime:uint16 R, 0–0xfffe",
+        "device_support": null
+      },
+      "target": {
+        "resource_type": "<flexContainer>",
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "표준 모델 미확인, custom 읽기 상태 후보"
+      },
+      "direction": "장치 → oneM2M",
+      "conversion": {
+        "documented": "두 잔여시간 모두 0.1 s 단위이다.",
+        "proposed_policy": "서로 덮어쓰지 않으며 0을 장치 전체의 idle 증거로 확대하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.2.2, lines 5327–5328",
+          "quote": "time remaining until the current command is complete"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.3, line 8844",
+          "quote": "in 1/10ths of a second"
+        }
+      ],
+      "uncertainties": [
+        "실제 지원과 갱신 방식이 없다."
+      ]
+    },
+    {
+      "id": "state_synchronization",
+      "name": "관측 상태 동기화·노출 범위 갱신",
+      "applicable_models": [
+        "LB-L01E",
+        "LB-L01D"
+      ],
+      "category": "IPE 표현 정책",
+      "description": "장치 기능 자체가 아니라 IPE 구현 제안이다. 확인된 외부 상태와 oneM2M 표현을 동기화하고 지원 기능 변화에 따라 표현을 갱신한다.",
+      "evidence_status": "proposed",
+      "decision": "map_candidate",
+      "source_interface": {
+        "ZCL_reporting": "OnOff 및 Color Control의 지원되는 reportable attribute",
+        "reporting_configuration": null,
+        "CurrentLevel_reporting": null,
+        "Matter_or_hub_notifications": null
+      },
+      "target": {
+        "resource_type": [
+          "<flexContainer>",
+          "<subscription>"
+        ],
+        "ModuleClass": null,
+        "DataPoint_or_action": null,
+        "types": null,
+        "standard_custom_status": "resource 종류·동기화 역할은 표준 근거. 구체적인 구독·상태 관리 정책은 구현 제안."
+      },
+      "direction": "외부 상태 → oneM2M; oneM2M 제어 요청 → 외부 기능",
+      "conversion": {
+        "documented": "IPE는 외부 변화와 resource 내용을 동기화한다. Blocking_Update subscription은 예시 수단이다.",
+        "proposed_policy": "지원 확인·읽기·report 수신 가능 여부에 따라 갱신 경로를 선택한다. 명령 요청·관측값·미확인을 구별하며 polling 주기를 임의 확정하지 않는다."
+      },
+      "evidence": [
+        {
+          "document_id": "IW-EXPOSE",
+          "location": "6.2.1",
+          "quote": "synchronizing the services"
+        },
+        {
+          "document_id": "IW-EXPOSE",
+          "location": "6.2.2",
+          "quote": "detect dynamic changes"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.7, lines 5213–5216",
+          "quote": "OnOff"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.6, lines 9551–9553",
+          "quote": "ColorTemperatureMireds (if implemented)"
+        }
+      ],
+      "uncertainties": [
+        "실제 report·read·notification 지원, 접근 권한, 오류·timeout·stale 상태 표현이 없다.",
+        "제공 문서의 RPS 표기만으로 CurrentLevel reporting 설정 전체를 확정할 수 없다."
+      ]
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "name": "실시간 소비전력·누적 전력량·전압 측정",
+      "reason": "정격 전력·전압은 정적 사양이다. 측정 서비스나 관련 cluster가 없으므로 telemetry 후보에서 제외한다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "정격 전력"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "정격 전압"
+        }
+      ]
+    },
+    {
+      "name": "주변 온도·습도 센서",
+      "reason": "작동 환경 범위는 센서 측정값이 아니다. DriftCompensation의 온도 감시 선택지도 이 제품의 센서 노출을 입증하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "작동 온도"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양",
+          "quote": "작동 습도"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.6, Table 5.4",
+          "quote": "Temperature monitoring"
+        }
+      ]
+    },
+    {
+      "name": "조명 구동 주파수·PWM 제어",
+      "reason": "CurrentFrequency·MinFrequency·MaxFrequency·Move to Closest Frequency는 표준에만 있는 선택 기능이다. 정격 전원 50/60 Hz 및 무선 MHz와 의미가 다르고 제품 지원 근거가 없어 현재 범위에서 제외한다.",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.19.2.2.2, line 7572",
+          "quote": "frequency in 10Hz (hertz) increments"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.3.5, line 5468",
+          "quote": "if the CurrentFrequency attribute is supported"
+        }
+      ]
+    },
+    {
+      "name": "색 보정·primary·white point·RGB color point 설정",
+      "reason": "DriftCompensation·CompensationText, NumberOfPrimaries·Primary1–6, WhitePoint 및 ColorPoint 설정은 교정·하드웨어 기술 정보이다. 제품값·지원 근거가 없고 기본 관리에 직접 필요하다는 근거도 없어 제외한다. RGB 제품명을 이 attribute들의 구현 증거로 사용하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.2.1, line 8975",
+          "quote": "number of color primaries implemented"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.4, Table 5.12",
+          "quote": "WhitePointX"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.2.1.7, line 8861",
+          "quote": "a textual indication"
+        }
+      ]
+    },
+    {
+      "name": "임의 scene·group 생성·삭제·목록 관리",
+      "reason": "제공 ZCL 본문은 Scenes 구현 시 확장 필드를 규정할 뿐 이 장치의 Scenes·Groups 서비스를 입증하지 않는다. 제한된 global scene 복원은 inventory에서 별도로 보류했다.",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.5, line 5491",
+          "quote": "If the Scenes server cluster is implemented"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "5.2.2.5, line 9533",
+          "quote": "If the Scenes server cluster"
+        }
+      ]
+    },
+    {
+      "name": "LB-L01E의 일반 RGB·HS 색 제어",
+      "reason": "CCT 변형에 RGB 변형의 후보 기능을 확대할 제조사 근거가 없다. 이는 미지원 확정이 아니라 현재 초안의 노출 범위 제한이다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 제품 이름",
+          "quote": "LED Bulb T2 (E26, CCT)"
+        }
+      ]
+    },
+    {
+      "name": "Bluetooth LE를 이용한 조명 제어·관리",
+      "reason": "무선 지원 사양만 있고 GATT service·characteristic·command가 없어 별도 관리 경로에서 제외한다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 무선 프로토콜",
+          "quote": "Bluetooth LE(1M/2M)"
+        }
+      ]
+    },
+    {
+      "name": "펌웨어 업데이트·재부팅·예약 스케줄·사용 시간·고장 진단",
+      "reason": "해당 기능을 정의하는 제공 제조사 또는 표준 본문이 없다. 공장 초기화, timed off, RemainingTime을 이 기능들의 증거로 확대하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 초기화 표",
+          "quote": "공장 초기화"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.3.6",
+          "quote": "On With Timed Off"
+        }
+      ]
+    },
+    {
+      "name": "독립적인 호흡·점멸 효과 action",
+      "reason": "두 번의 호흡은 연결 모드 표시로만 문서화된다. 사용자가 호출하는 조명 효과로 노출하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, 3",
+          "quote": "장치 연결 모드에 들어왔음을 나타냅니다."
+        }
+      ]
+    },
+    {
+      "name": "standards revision의 장치 실측값",
+      "reason": "ZCL ClusterRevision의 일반 규정은 장치가 보고한 revision이 아니다. 일반 표준 revision을 제품 attribute 값으로 채우지 않는다.",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.1.1, line 5052",
+          "quote": "highest revision number in the table below"
+        }
+      ]
+    },
+    {
+      "name": "모든 기능의 범용 container/contentInstance 표현",
+      "reason": "조명 vertical service에는 specialized flexContainer를 사용하라는 지침이 있다. 구체 SDT 정의가 없다는 이유로 모든 기능을 범용 데이터 저장 resource로 대체하지 않는다.",
+      "evidence": [
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, vertical domain services",
+          "quote": "Specialized <flexContainer> resource types for moduleClasses shall be used"
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "draft_approval",
+      "question": "이 초안의 핵심 조건부 범위인 식별·정적 사양·통신 capability·On/Off·밝기·CCT 및 LB-L01D 색 제어를 승인할 것인가? map_candidate는 지원 확인이나 적합성 선언이 아니다."
+    },
+    {
+      "id": "sdt_definitions",
+      "question": "사용할 TS-0023 release와 해당 표준 SDT 모델 정의를 확보해야 한다. ModuleClass, DataPoint, action, 타입, 단위, 접근 방향, specialization 식별자를 확인한 뒤 custom 필요성을 판단해야 한다."
+    },
+    {
+      "id": "document_versions",
+      "question": "AQARA 설명서 발행 버전과 TS-0033 snapshot의 release 번호를 확정해야 한다. 제공된 ZCL 본문의 오탈자·범위 충돌에 적용할 정정 근거도 필요하다."
+    },
+    {
+      "id": "source_route",
+      "question": "IPE가 Zigbee에 직접 접속할지, Aqara 허브 API를 사용할지, Matter Controller 경로를 사용할지 결정해야 한다. ZCL 식별자를 Matter 인터페이스 식별자로 재사용할 근거는 없다."
+    },
+    {
+      "id": "device_protocol_details",
+      "question": "각 모델·프로토콜별 endpoint, cluster와 revision, 지원 attribute·command, 읽기·쓰기·report 가능 여부 및 권한을 확인해야 한다."
+    },
+    {
+      "id": "variant_capabilities",
+      "question": "두 모델의 실제 디밍·CCT 범위와 LB-L01D의 HS·XY·enhanced hue·color loop 지원을 확인해야 한다. LB-L01E의 색 표현 지원 여부도 제품명 이상으로 추정하지 않아야 한다."
+    },
+    {
+      "id": "conversion_policies",
+      "question": "목표 SDT 단위가 확인된 후 밝기 정규화, 정수 반올림, hue 순환, K↔mired 역변환, 범위 초과·undefined·invalid 처리를 승인해야 한다."
+    },
+    {
+      "id": "off_behavior",
+      "question": "밝기 요청의 with On/Off 선택과 ExecuteIfOff 기본 정책은 무엇인가? Color Control의 꺼진 상태 무조건 무시 서술과 Options 규정, Level 상태 변화 예시의 불일치를 해소해야 한다."
+    },
+    {
+      "id": "reset_effects",
+      "question": "전원 5회 네트워크 초기화, 후속 프로토콜 전환, 앱 장치 제거의 삭제 효과를 제조사 기준으로 구분해야 한다. 초기화·전환의 원격 호출 가능 여부도 필요하다."
+    },
+    {
+      "id": "startup_ranges",
+      "question": "StartUpColorTemperatureMireds의 0xfeff·0xffef 범위 차이와 0xffff 복원 sentinel, 전이 시간 attribute의 범위·기본값 차이를 어떻게 적용할지 확인해야 한다."
+    },
+    {
+      "id": "resource_lifecycle",
+      "question": "개별 장치 식별자, 관리 resource 배치, 재등록 시 동일성, 프로토콜 전환·초기화·장치 제거 후 resource 유지·삭제 정책을 결정해야 한다."
+    },
+    {
+      "id": "synchronization_policy",
+      "question": "관측 상태 확인, report 또는 notification 구성, 필요 시 polling, 실패·timeout·stale 표시와 명령 결과 반영 정책을 정해야 한다. Blocking_Update 사용은 제공 문서의 예시이며 필수 구현으로 확정되지 않았다."
+    },
+    {
+      "id": "advanced_scope",
+      "question": "실제 지원과 표준 모델이 확인되면 전원 복구 설정·timed off·소등 효과·global scene·전이 action·색 결합을 추가할지 판단해야 한다. 현재 defer 항목은 미지원 확정이 아니다."
+    }
+  ]
+}

@@ -1,0 +1,726 @@
+{
+  "facts": [
+    {
+      "id": "A01",
+      "status": "documented",
+      "value": "LB-L01E",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양; regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, CCT)\n 모델명: LB-L01E"
+        }
+      ],
+      "note": "Manufacturer-confirmed CCT variant."
+    },
+    {
+      "id": "A02",
+      "status": "documented",
+      "value": "LB-L01D",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양; regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, RGB CCT)\n 모델명: LB-L01D"
+        }
+      ],
+      "note": "Manufacturer-confirmed RGB CCT variant."
+    },
+    {
+      "id": "A03",
+      "status": "documented",
+      "value": 10.5,
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전력 row",
+          "quote": "10.5W"
+        }
+      ],
+      "note": "Shared specification for both variants."
+    },
+    {
+      "id": "A04",
+      "status": "documented",
+      "value": [
+        100,
+        240
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전압 row",
+          "quote": "100 - 240 V~, 50/60 Hz"
+        }
+      ],
+      "note": "Shared AC voltage range."
+    },
+    {
+      "id": "A05",
+      "status": "documented",
+      "value": [
+        -10,
+        40
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 온도 row",
+          "quote": "-10 °C ~ 40 °C"
+        }
+      ],
+      "note": "Operating limits, not measured temperature."
+    },
+    {
+      "id": "A06",
+      "status": "documented",
+      "value": [
+        0,
+        95
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 작동 습도 row",
+          "quote": "0 ~ 95% RH, 비결로 조건"
+        }
+      ],
+      "note": "Non-condensing conditions apply."
+    },
+    {
+      "id": "A07",
+      "status": "documented",
+      "value": "Thread",
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Zigbee 모드), step 2",
+          "quote": "장치의 초기 상태는 Thread이며"
+        }
+      ],
+      "note": "Initial mode before switching to Zigbee."
+    },
+    {
+      "id": "A08",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The manufacturer excerpt specifies no Zigbee endpoint number."
+    },
+    {
+      "id": "A09",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The manufacturer excerpt supplies no supported Zigbee cluster ID list for either variant."
+    },
+    {
+      "id": "A10",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No device firmware version is supplied."
+    },
+    {
+      "id": "A11",
+      "status": "documented",
+      "value": [
+        50,
+        60
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "제품 사양, 정격 전압 row",
+          "quote": "50/60 Hz"
+        }
+      ],
+      "note": "Shared rated mains frequencies."
+    },
+    {
+      "id": "A12",
+      "status": "documented",
+      "value": true,
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "장치 추가 및 초기화, Aqara Home(Zigbee 모드)",
+          "quote": "Aqara Home(Zigbee 모드)에서 장치를 사용하려면 Aqara Zigbee Hub가 필요합니다."
+        }
+      ],
+      "note": "Requirement applies to Aqara Home Zigbee mode."
+    },
+    {
+      "id": "Z01",
+      "status": "documented",
+      "value": "0x0006",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.1.3, line 5054, page 3-62",
+          "quote": "0x0006             OO            On/Off"
+        }
+      ],
+      "note": "Generic ZCL identifier; device implementation unconfirmed."
+    },
+    {
+      "id": "Z02",
+      "status": "documented",
+      "value": "0x0000",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "Table 3-45, page 3-62",
+          "quote": "0x0000       OnOff"
+        }
+      ],
+      "note": "Generic On/Off server attribute identifier."
+    },
+    {
+      "id": "Z03",
+      "status": "documented",
+      "value": "bool",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "Table 3-45, page 3-62",
+          "quote": "OnOff                        bool"
+        }
+      ],
+      "note": "Declared ZCL type."
+    },
+    {
+      "id": "Z04",
+      "status": "documented",
+      "value": "RPS",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "Table 3-45, page 3-62",
+          "quote": "RPS"
+        }
+      ],
+      "note": "The listed access does not include attribute writing."
+    },
+    {
+      "id": "Z05",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "Off is named, but its command identifier is absent from the supplied excerpt."
+    },
+    {
+      "id": "Z06",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "On is named, but its command identifier is absent from the supplied excerpt."
+    },
+    {
+      "id": "Z07",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "Toggle is named, but its command identifier is absent from the supplied excerpt."
+    },
+    {
+      "id": "Z08",
+      "status": "documented",
+      "value": "0x0008",
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.1.3, identifier table, page 3-72",
+          "quote": "0x0008         Derived      Level Control for Lighting"
+        }
+      ],
+      "note": "Identifier is explicit despite inconsistent derived-section cross-references."
+    },
+    {
+      "id": "Z09",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "CurrentLevel is named, but its attribute identifier is not supplied."
+    },
+    {
+      "id": "Z10",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied excerpt omits the CurrentLevel type declaration."
+    },
+    {
+      "id": "Z11",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied excerpt omits the CurrentLevel access declaration."
+    },
+    {
+      "id": "Z12",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The derived lighting cluster's minimum usable CurrentLevel is not supplied."
+    },
+    {
+      "id": "Z13",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The derived lighting cluster's maximum usable CurrentLevel is not supplied."
+    },
+    {
+      "id": "Z14",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no Color Control cluster identifier."
+    },
+    {
+      "id": "Z15",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no CurrentHue attribute definition."
+    },
+    {
+      "id": "Z16",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no CurrentSaturation attribute definition."
+    },
+    {
+      "id": "Z17",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no CurrentX attribute definition."
+    },
+    {
+      "id": "Z18",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no CurrentY attribute definition."
+    },
+    {
+      "id": "Z19",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The supplied ZCL body contains no ColorTemperatureMireds attribute definition."
+    },
+    {
+      "id": "Z20",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "The ColorTemperatureMireds type declaration is not supplied."
+    },
+    {
+      "id": "Z21",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No mireds-to-kelvins conversion rule is supplied."
+    },
+    {
+      "id": "Z22",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No ColorTemperatureMireds undefined or invalid codes are supplied."
+    },
+    {
+      "id": "Z23",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No CurrentX chromaticity conversion denominator is supplied."
+    },
+    {
+      "id": "Z24",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No CurrentSaturation fraction conversion denominator is supplied."
+    },
+    {
+      "id": "Z25",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "No CurrentHue degrees conversion numerator is supplied."
+    },
+    {
+      "id": "Z26",
+      "status": "documented",
+      "value": false,
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.2.2, Table 3-45",
+          "quote": "Attributes of the On/Off Server Cluster"
+        }
+      ],
+      "note": "Scope conclusion: generic ZCL definitions do not establish this manufacturer's implementation; optional Color Control definitions are also absent."
+    },
+    {
+      "id": "T01",
+      "status": "documented",
+      "value": [
+        "binarySwitch",
+        "state"
+      ],
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.12, Table 5.3.1.12-2",
+          "quote": "state\nxs:boolean\nRW"
+        }
+      ],
+      "note": "SDT power-state representation."
+    },
+    {
+      "id": "T02",
+      "status": "documented",
+      "value": "xs:boolean",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.12-2",
+          "quote": "state\nxs:boolean"
+        }
+      ],
+      "note": "Type of binarySwitch.state."
+    },
+    {
+      "id": "T03",
+      "status": "documented",
+      "value": [
+        "brightness",
+        "brightness"
+      ],
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.17, Table 5.3.1.17-1",
+          "quote": "DataPoints of brightness ModuleClass"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.17-1",
+          "quote": "brightness\nxs:integer\nRW"
+        }
+      ],
+      "note": "ModuleClass and DataPoint share the same name."
+    },
+    {
+      "id": "T04",
+      "status": "documented",
+      "value": "xs:integer",
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.17-1",
+          "quote": "brightness\nxs:integer"
+        }
+      ],
+      "note": "SDT brightness requires an integer."
+    },
+    {
+      "id": "T05",
+      "status": "documented",
+      "value": [
+        0,
+        100
+      ],
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.17",
+          "quote": "0 % is the minimum brightness"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.17",
+          "quote": "100 % is the maximum brightness"
+        }
+      ],
+      "note": "Zero denotes minimum brightness; it does not independently establish off state."
+    },
+    {
+      "id": "T06",
+      "status": "documented",
+      "value": [
+        "colourSaturation",
+        "colourSaturation"
+      ],
+      "evidence": [
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.24, Table 5.3.1.24-1",
+          "quote": "DataPoints of colourSaturation ModuleClass"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.24-1",
+          "quote": "colourSaturation\nxs:integer\nRW"
+        }
+      ],
+      "note": "SDT saturation percentage DataPoint."
+    },
+    {
+      "id": "T07",
+      "status": "documented",
+      "value": "flexContainer",
+      "evidence": [
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.3",
+          "quote": "The ModuleClass models shall be mapped to the specializations of a <flexContainer> resource."
+        }
+      ],
+      "note": "A specialized resource represents the ModuleClass."
+    },
+    {
+      "id": "T08",
+      "status": "documented",
+      "value": "customAttribute",
+      "evidence": [
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.6, Rule 5-1",
+          "quote": "shall be mapped to [customAttribute]"
+        }
+      ],
+      "note": "Uses the DataPoint name."
+    },
+    {
+      "id": "T09",
+      "status": "not_stated",
+      "value": null,
+      "evidence": [],
+      "note": "Supplied TS-0033 passages specify synchronization responsibilities without a fixed mandatory polling interval."
+    },
+    {
+      "id": "T10",
+      "status": "documented",
+      "value": "flexContainer",
+      "evidence": [
+        {
+          "document_id": "IW-RESOURCE",
+          "location": "7.3, vertical-domain services",
+          "quote": "<flexContainer>\nresource types for moduleClasses shall be used to represent those services."
+        }
+      ],
+      "note": "Specialized ModuleClass resources are required."
+    }
+  ],
+  "mappings": [
+    {
+      "function": "on_off",
+      "source_cluster": "0x0006",
+      "source_attribute": "0x0000",
+      "source_access": "RPS",
+      "source_encoding": "bool",
+      "target_moduleClass": "binarySwitch",
+      "target_dataPoint": "state",
+      "target_type": "xs:boolean",
+      "conversion_proposal": "State: preserve boolean meaning; map off to false and on to true after implementation verification. Command: use separately verified On/Off commands, not an attribute write; command identifiers are missing.",
+      "applicability_status": "candidate_unverified",
+      "supported_models": null,
+      "uncertainties": [
+        "Neither variant has manufacturer-confirmed cluster or endpoint support.",
+        "SDT RW does not make OnOff writable.",
+        "All rows are unapproved drafts; proposed SDT DataPoints would become customAttribute values of specialized flexContainer resources."
+      ],
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.8.1.3",
+          "quote": "0x0006             OO            On/Off"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "Table 3-45",
+          "quote": "0x0000       OnOff                        bool"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "Table 3-45",
+          "quote": "RPS"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "lines 5060-5063",
+          "quote": "0x00"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "lines 5060-5063",
+          "quote": "0x01"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.12-2",
+          "quote": "\"True\" indicates turned-on, and \"False\" indicates turned-off."
+        },
+        {
+          "document_id": "AQARA",
+          "location": "제품 소개",
+          "quote": "Zigbee와 Thread 듀얼 프로토콜"
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.3",
+          "quote": "specializations of a <flexContainer> resource"
+        },
+        {
+          "document_id": "SDT-MAP",
+          "location": "6.2.6, Rule 5-1",
+          "quote": "shall be mapped to [customAttribute]"
+        }
+      ]
+    },
+    {
+      "function": "brightness",
+      "source_cluster": "0x0008",
+      "source_attribute": "CurrentLevel",
+      "source_access": null,
+      "source_encoding": null,
+      "target_moduleClass": "brightness",
+      "target_dataPoint": "brightness",
+      "target_type": "xs:integer",
+      "conversion_proposal": "State: defer numeric conversion until lighting limits and encoding are documented; percentage scaling would be a proposal requiring explicit endpoint and rounding rules. Command: defer command selection, inverse conversion and transition behavior; no direct attribute-write mapping is established.",
+      "applicability_status": "candidate_unverified",
+      "supported_models": null,
+      "uncertainties": [
+        "CurrentLevel identifier, type, access and lighting limits are absent.",
+        "The manual's connection-mode brightening/dimming does not prove remotely exposed brightness control for either variant.",
+        "Keep on/off state separate from brightness."
+      ],
+      "evidence": [
+        {
+          "document_id": "ZCL",
+          "location": "3.10.1.3, page 3-72",
+          "quote": "0x0008         Derived      Level Control for Lighting"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.1, lines 5284-5285",
+          "quote": "intrinsically independent variables"
+        },
+        {
+          "document_id": "ZCL",
+          "location": "3.10.2.1.1, lines 5295-5296",
+          "quote": "CurrentLevel attribute"
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.17",
+          "quote": "Brightness is scaled as a percentage."
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.17-1",
+          "quote": "brightness\nxs:integer\nRW"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "장치 설치, step 3",
+          "quote": "두 번의 호흡 주기(밝아짐~어두워짐)"
+        }
+      ]
+    },
+    {
+      "function": "colour_saturation",
+      "source_cluster": null,
+      "source_attribute": null,
+      "source_access": null,
+      "source_encoding": null,
+      "target_moduleClass": "colourSaturation",
+      "target_dataPoint": "colourSaturation",
+      "target_type": "xs:integer",
+      "conversion_proposal": "State: candidate semantic target only; no source conversion can be established. Command: defer until source commands and device support are documented. Any percentage scaling and rounding would require an explicit proposal and semantic validation.",
+      "applicability_status": "candidate_unverified",
+      "supported_models": null,
+      "uncertainties": [
+        "LB-L01D is manufacturer-designated RGB CCT, making it a conceptual candidate; saturation implementation remains unknown.",
+        "LB-L01E is designated CCT and has no documented RGB or saturation capability.",
+        "The supplied ZCL body omits Color Control definitions; SDT's normal-colour midpoint semantics require validation against the eventual source."
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "Regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, RGB CCT)\n 모델명: LB-L01D"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "Regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, CCT)\n 모델명: LB-L01E"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.24-1",
+          "quote": "colourSaturation\nxs:integer\nRW"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.24-1",
+          "quote": "\"colourSaturation\" has a range of [0,100]."
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.24-1",
+          "quote": "normal colour images"
+        }
+      ]
+    },
+    {
+      "function": "colour_temperature",
+      "source_cluster": null,
+      "source_attribute": null,
+      "source_access": null,
+      "source_encoding": null,
+      "target_moduleClass": null,
+      "target_dataPoint": null,
+      "target_type": null,
+      "conversion_proposal": "State: leave unmapped pending source definitions and a suitable target. A custom colour-temperature representation could be proposed separately; no conversion or rounding is selected. Command: no write mapping is established.",
+      "applicability_status": "candidate_unverified",
+      "supported_models": null,
+      "uncertainties": [
+        "Both model names include CCT, but neither has a documented low-level colour-temperature implementation.",
+        "Supplied ZCL text omits ColorTemperatureMireds encoding, limits and special codes.",
+        "SDT slcReportInfo.colourTemperature is a read-only street-light DataPoint; applicability to these bulbs and its required companion DataPoints is unproven.",
+        "SDT temperature represents physical temperature and is unsuitable as a direct colour-temperature substitute."
+      ],
+      "evidence": [
+        {
+          "document_id": "AQARA",
+          "location": "Regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, CCT)\n 모델명: LB-L01E"
+        },
+        {
+          "document_id": "AQARA",
+          "location": "Regulatory identification",
+          "quote": "기자재명칭: LED Bulb T2 (E26, RGB CCT)\n 모델명: LB-L01D"
+        },
+        {
+          "document_id": "SDT",
+          "location": "Table 5.3.1.81-1",
+          "quote": "colourTemperature\nxs:integer\nR\ntrue\nK\nThe current colour temperature of the street lights."
+        },
+        {
+          "document_id": "SDT",
+          "location": "5.3.1.87",
+          "quote": "devices such as an air conditioner, refrigerator, oven"
+        }
+      ]
+    }
+  ]
+}

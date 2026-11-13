@@ -1,0 +1,24 @@
+{
+  "name": "04-high-r2",
+  "effort": "high",
+  "repeat": 2,
+  "requested_model": "gpt-6.1-sol",
+  "started_at_utc": "2026-11-10T03:13:45.818561+09:00",
+  "completed_at_utc": "2026-11-10T03:17:04.512333+09:00",
+  "elapsed_seconds": 202.093,
+  "exit_code": 0,
+  "json_parsed": true,
+  "usage": [
+    {
+      "input_tokens": 62701,
+      "cached_input_tokens": 11392,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 9753,
+      "reasoning_output_tokens": 1552
+    }
+  ],
+  "cli_version": "codex-cli 0.167.0",
+  "prompt_sha256": "2a04842e19ce557cec2d0fda469476a4c3a36bd3230c022481bc32a61d7420d0",
+  "isolation": "Only system runtime/DNS, CLI binaries, private temporary auth home and empty /work are mounted. No gold, prior results, project files or user configuration exposed. Model tools disabled.",
+  "export_note": "Selected metadata only. CLI argv, session identifiers, auth paths and event logs are omitted. response.json is unmodified."
+}

@@ -1,0 +1,25 @@
+{
+  "name": "08-B-medium-r2",
+  "condition": "B",
+  "effort": "medium",
+  "repeat": 2,
+  "requested_model": "gpt-6.1-sol",
+  "started_at_utc": "2026-11-10T04:17:28.979452+09:00",
+  "completed_at_utc": "2026-11-10T04:22:19.021556+09:00",
+  "elapsed_seconds": 294.486,
+  "exit_code": 0,
+  "json_parsed": true,
+  "usage": [
+    {
+      "input_tokens": 48292,
+      "cached_input_tokens": 11392,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 14295,
+      "reasoning_output_tokens": 474
+    }
+  ],
+  "cli_version": "codex-cli 0.167.0",
+  "prompt_sha256": "031b725fcbbd5ae7abcce506851d6d658086af4819337fe6bf7d0744b1d6f6bb",
+  "isolation": "Only system runtime/DNS, CLI binaries, private temporary auth home and empty /work are mounted. No gold, prior results, project files or user configuration exposed. Model tools disabled.",
+  "export_note": "Selected metadata only. CLI argv, session identifiers, auth paths and event logs are omitted. response.json is unmodified."
+}
